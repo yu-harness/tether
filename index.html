@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tether — 本地 Code Agent 运行时 · 项目演示</title>
+  <meta name="description" content="tether 是一个本地的 code agent 运行时（harness）：上下文有预算有优先级、工具有边界、状态可恢复、过程可观测。本页全部数字来自可复现的本地实验。">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">tether</span>
+    <div class="nav-links">
+      <a href="#intro">项目介绍</a>
+      <a href="#replay">Run 回放</a>
+      <a href="#metrics">数字面板</a>
+      <a href="#tracing">追踪截图</a>
+      <a href="#docs">文档与复现</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ 1. 项目介绍 ============ -->
+<header class="hero" id="intro">
+  <div class="container">
+    <p class="hero-kicker">本地 Code Agent Runtime / Harness</p>
+    <h1>tether：模型可以换，<br>受控执行环境是沉淀下来的东西</h1>
+    <p class="hero-lede">
+      tether 是一个运行在本地终端的 code agent harness。模型只是一块可替换的部件——
+      真正积累下来的是外面这层受控执行环境：上下文有预算有优先级、工具有边界、
+      状态可恢复、过程可观测。这是它和「模型加几个工具」的本质区别。
+    </p>
+
+    <div class="pipeline">
+      <h2 class="pipeline-title">一条请求的九个环节</h2>
+      <ol class="pipeline-flow">
+        <li>仓库快照</li>
+        <li>稳定前缀组装</li>
+        <li>上下文分段预算</li>
+        <li>模型调用</li>
+        <li>输出解析</li>
+        <li>工具执行<span class="step-note">路径限制 · 审批 · 重复调用拦截</span></li>
+        <li>checkpoint</li>
+        <li>记忆沉淀</li>
+        <li>工件落盘</li>
+      </ol>
+    </div>
+
+    <div class="hero-diff">
+      <div class="diff-item">
+        <h3>上下文有预算有优先级</h3>
+        <p>prompt 按 section 划分（prefix / checkpoint / memory / 相关记忆 / history / 当前请求），每段有独立字符预算与固定的缩减顺序，超预算时按优先级裁剪，当前请求永远保留。</p>
+      </div>
+      <div class="diff-item">
+        <h3>工具有边界</h3>
+        <p>工具注册、参数校验、路径白名单、风险审批、重复调用检测都在应用侧强制执行。拦截不依赖模型自觉。</p>
+      </div>
+      <div class="diff-item">
+        <h3>状态可恢复</h3>
+        <p>每次工具执行后写 checkpoint，恢复时校验工作区指纹与运行时身份，stale 状态重新锚定，绝不误信旧状态继续执行。</p>
+      </div>
+      <div class="diff-item">
+        <h3>过程可观测</h3>
+        <p>每次 run 固定产出 task_state.json、trace.jsonl、report.json 三件工件，并按 OpenTelemetry GenAI 语义约定上报 Jaeger 与 Langfuse。</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 2. 真实 run 回放 ============ -->
+<section class="section" id="replay">
+  <div class="container">
+    <h2 class="section-title">真实 Run 回放</h2>
+    <p class="section-desc">
+      下面是任务 <code>path_escape_recovery</code> 的一次真实 run（DeepSeek 模型，
+      <code>run_20261005-081410-452a72</code>），事件数据来自该 run 的
+      <code>trace.jsonl</code>，逐条原样嵌入本页，未做任何手工改动。
+      这条 run 还触发了 tether 的路径防护：工作区外的写入被拦在工作区内，任务仍然正常完成。
+    </p>
+
+    <div class="replay-summary" id="replay-summary"><!-- JS 从事件数据计算填充 --></div>
+
+    <div class="player">
+      <div class="player-controls">
+        <button id="btn-play" class="btn btn-primary" type="button">播放</button>
+        <button id="btn-step" class="btn" type="button">单步</button>
+        <button id="btn-reset" class="btn" type="button">重置</button>
+        <span class="player-counter" id="player-counter">0 / 0</span>
+      </div>
+      <div class="player-track" id="player-track">
+        <div class="player-progress" id="player-progress"></div>
+        <div class="player-thumb" id="player-thumb"></div>
+      </div>
+      <div class="player-time"><span id="time-current">+0.000s</span><span id="time-total"></span></div>
+    </div>
+
+    <div class="timeline" id="timeline"><!-- JS 渲染事件卡片 --></div>
+  </div>
+</section>
+
+<!-- ============ 3. 数字面板 ============ -->
+<section class="section section-alt" id="metrics">
+  <div class="container">
+    <h2 class="section-title">数字面板</h2>
+    <p class="section-desc">
+      全部数字来自可复现的本地实验，对外统一口径。合成模式用 FakeModelClient 跑确定性脚本，
+      验证 harness 机制本身；真实模式用 deepseek-flash（DeepSeek-V4.1）跑同一批任务，反映模型能力。
+      两种模式测的东西不同，数字不可互换。
+    </p>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">18/18</div>
+        <div class="metric-label">合成模式固定 benchmark 通过率</div>
+        <p class="metric-detail">FakeModelClient 确定性脚本，验证 harness 机制本身：runtime 合同稳定，模型这一层固定。</p>
+        <div class="metric-source">来源：benchmarks/results/，可复现</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">90%</div>
+        <div class="metric-label">恢复成功率（27/30）</div>
+        <p class="metric-detail">失败的 3 次来自设计上不带 checkpoint 的场景（checkpoint 文件缺失，按设计必然失败）。</p>
+        <div class="metric-source">来源：benchmarks/results/，可复现</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">100% / 100% / 0%</div>
+        <div class="metric-label">stale 重新锚定率 / 漂移识别率 / 误信旧状态</div>
+        <p class="metric-detail">stale 重新锚定率 100%、workspace 漂移识别率 100%、误信旧状态继续执行 0%。</p>
+        <div class="metric-source">来源：benchmarks/results/，可复现</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">9/18</div>
+        <div class="metric-label">真实模型对照通过率</div>
+        <p class="metric-detail">deepseek-flash 跑同一批固定任务。与合成 18/18 一起讲：前者测模型能力，后者测 harness 合同稳定。</p>
+        <div class="metric-source">来源：benchmarks/results/，可复现</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">2.4 次 · $0.000291</div>
+        <div class="metric-label">每任务模型调用与成本</div>
+        <p class="metric-detail">18 个任务共 43 次调用、$0.005247（2026-10-05 实测，高峰时段价）。</p>
+        <div class="metric-source">来源：benchmarks/results/，可复现</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">80.6%</div>
+        <div class="metric-label">prefix 缓存命中率</div>
+        <p class="metric-detail">节省约 69% 成本（$0.011892）。每个任务首轮调用是冷启动，命中率天然被拉低；它是「稳定前缀跨轮不变」设计的直接收益证据。</p>
+        <div class="metric-source">来源：benchmarks/results/，可复现</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">25.11% / 37.19%</div>
+        <div class="metric-label">上下文压缩率（平均 / 最大）</div>
+        <p class="metric-detail">四层消融，合成模式。平均 prompt 从 8490.33 字符压到 6173.67 字符，当前请求保留率 100%。</p>
+        <div class="metric-source">来源：benchmarks/results/，可复现</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">0 对 60 次</div>
+        <div class="metric-label">记忆收益：重复读文件（开 / 关）</div>
+        <p class="metric-detail">12 任务 × 5 次的大样本消融：记忆开启后重复读 60 次降为 0 次，平均工具步数 1.00 降为 0.00。</p>
+        <div class="metric-source">来源：benchmarks/results/，可复现</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. 追踪截图 ============ -->
+<section class="section" id="tracing">
+  <div class="container">
+    <h2 class="section-title">可观测性：同一份事件流，两个后端</h2>
+    <p class="section-desc">
+      tether 把运行事件按 OpenTelemetry GenAI 语义约定同时上报 Jaeger 与 Langfuse：
+      trace = 一次 run，span = 单次动作，session.id = 会话层。
+      trace id 由 run_id 的 sha256 派生，确定性生成，两个后端可以互相对上同一次运行。
+    </p>
+
+    <h3 class="shot-group-title">Jaeger</h3>
+    <div class="shots-grid">
+      <figure class="shot">
+        <img src="assets/trace-list.png" alt="Jaeger trace 列表" loading="lazy">
+        <figcaption>trace 列表：每条 trace 对应一次 run</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/trace-timeline.png" alt="Jaeger trace 时间线" loading="lazy">
+        <figcaption>trace 时间线：span 对应单次动作（模型调用、工具执行等）</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/thread-session.png" alt="Jaeger 会话维度" loading="lazy">
+        <figcaption>thread / session 维度：同一会话下的多次 run</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="shot-group-title">Langfuse</h3>
+    <div class="shots-grid">
+      <figure class="shot">
+        <img src="assets/langfuse-trace-list.png" alt="Langfuse trace 列表" loading="lazy">
+        <figcaption>trace 列表</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/langfuse-trace-detail.png" alt="Langfuse trace 详情" loading="lazy">
+        <figcaption>trace 详情：单次 run 的 span 层级与耗时</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/langfuse-session.png" alt="Langfuse 会话" loading="lazy">
+        <figcaption>session：session.id 聚合的会话层</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="assets/langfuse-session-detail.png" alt="Langfuse 会话详情" loading="lazy">
+        <figcaption>session 详情：会话内全部 run 的串联视图</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. 文档与复现入口 ============ -->
+<section class="section section-alt" id="docs">
+  <div class="container">
+    <h2 class="section-title">文档与复现</h2>
+
+    <div class="docs-cols">
+      <div>
+        <h3 class="docs-subtitle">设计要点（十篇设计文档的骨架）</h3>
+        <ul class="doc-list">
+          <li>全局总览 — 系统全貌与阅读路径</li>
+          <li>代码仓库上下文 — 仓库快照与上下文来源</li>
+          <li>运行时主循环 — 九环节执行编排</li>
+          <li>工具接入与调用 — 注册、路径限制与审批</li>
+          <li>提示词形态 — 稳定前缀与 prefix 缓存</li>
+          <li>结构化记忆 — 记忆沉淀与召回</li>
+          <li>上下文瘦身 — 分段预算与缩减顺序</li>
+          <li>会话状态与恢复 — checkpoint 与恢复</li>
+          <li class="doc-hl"><strong>评测框架与实验方法</strong> — 全部数字的实验方法与成本口径</li>
+          <li class="doc-hl"><strong>可观测性接入</strong> — OpenTelemetry 上报与双后端追踪</li>
+        </ul>
+        <p class="docs-note">数字口径见 <code>benchmarks/results/</code> 下的实验报告与归档（本页数字面板与其逐条对应）。</p>
+      </div>
+
+      <div>
+        <h3 class="docs-subtitle">复现命令（在仓库根目录执行）</h3>
+
+        <div class="cmd-block">
+          <div class="cmd-title">统一归档（四层消融 + 压力与安全消融，不耗 API 额度）</div>
+          <pre><code>cd D:/md/AI实习/tether
+D:/Dev/miniconda3/python.exe scripts/reproduce_resume_archive.py \
+  --out-dir benchmarks/results/resume-archive</code></pre>
+        </div>
+
+        <div class="cmd-block">
+          <div class="cmd-title">本地复跑（同一套实验写入 artifacts，用于核对归档数字）</div>
+          <pre><code>D:/Dev/miniconda3/python.exe scripts/run_ablation_experiments.py \
+  --out-dir artifacts/ablation --runs-root tmp/runs</code></pre>
+        </div>
+
+        <div class="cmd-block">
+          <div class="cmd-title">真实模型 + 成本卡片（需 .env 中的 TETHER_DEEPSEEK_API_KEY，消耗少量额度）</div>
+          <pre><code>D:/Dev/miniconda3/python.exe scripts/run_deepseek_benchmark.py \
+  --output-json benchmarks/results/cost-card-2026-10-05/deepseek-flash.json \
+  --workspace-root benchmarks/results/cost-card-2026-10-05/workspaces
+D:/Dev/miniconda3/python.exe scripts/build_cost_card.py \
+  --runs-root benchmarks/results/cost-card-2026-10-05/workspaces \
+  --output benchmarks/results/cost-card-2026-10-05/cost-card.md</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer-author">赵宇 · 成都理工大学计算机技术硕士在读</p>
+    <p class="footer-decl">本页面全部数字来自可复现的本地实验。</p>
+  </div>
+</footer>
+
+<script src="assets/events.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
