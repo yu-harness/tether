@@ -1,0 +1,12 @@
+{
+  "benchmark_tasks": "benchmarks/coding_tasks.json",
+  "captured_at": "2026-10-05T10:34:50.478620+08:00",
+  "context_repetitions": 5,
+  "executable": "D:\\Dev\\miniconda3\\python.exe",
+  "experiment_mode": "synthetic",
+  "git_commit": "95cb3e56e9767854d22fb79af4330d08ae7c675f",
+  "memory_repetitions": 5,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "recovery_repetitions": 3
+}

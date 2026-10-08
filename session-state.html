@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>会话状态的包含关系</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+    background: radial-gradient(1200px 700px at 15% -10%, #22314f 0%, #10131a 55%, #090b10 100%);
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 48px 20px; color: #dfe3ec;
+  }
+  .wrap { width: 100%; max-width: 880px; }
+
+  /* ── 最外层：办公位 ── */
+  .desk {
+    border: 1px solid rgba(130,160,225,.30);
+    border-radius: 22px;
+    padding: 30px 28px;
+    background: rgba(255,255,255,.018);
+  }
+  .head { margin-bottom: 26px; }
+  .head h1 { font-size: 27px; font-weight: 600; color: #f2f5fc; letter-spacing: .02em; }
+  .head p { font-size: 14px; color: #7d8aa6; margin-top: 8px; line-height: 1.6; }
+
+  /* ── 两个区域 ── */
+  .zone { border-radius: 16px; padding: 20px; }
+  .zone-label {
+    font-size: 12px; letter-spacing: .12em;
+    margin-bottom: 16px; font-weight: 600;
+  }
+  .zone-desk {
+    border: 1.5px dashed rgba(255,190,105,.45);
+    background: rgba(255,190,105,.055);
+  }
+  .zone-desk .zone-label { color: #e0a556; }
+  .zone-wall {
+    border: 1.5px solid rgba(120,200,255,.40);
+    background: rgba(120,200,255,.055);
+    margin-top: 18px;
+  }
+  .zone-wall .zone-label { color: #6fb8e8; }
+
+  /* ── 卡片 ── */
+  .cards { display: flex; gap: 14px; flex-wrap: wrap; }
+  .card { flex: 1; min-width: 190px; border-radius: 12px; padding: 16px 18px; }
+  .card-desk {
+    background: rgba(255,190,105,.10);
+    border: 1px solid rgba(255,190,105,.28);
+  }
+  .card-wall {
+    background: rgba(120,200,255,.10);
+    border: 1px solid rgba(120,200,255,.30);
+    max-width: 270px;
+  }
+  .name { font-size: 18px; font-weight: 600; color: #f0f4ff; margin-bottom: 4px; }
+  .real { font-size: 12px; letter-spacing: .06em; margin-bottom: 10px; }
+  .card-desk .real { color: #c9964e; }
+  .card-wall .real { color: #5fa8d8; }
+  .desc { font-size: 13px; line-height: 1.65; color: #a8b2c8; }
+
+  /* ── 口诀 ── */
+  .motto {
+    margin-top: 26px; text-align: center;
+    font-size: 15px; letter-spacing: .10em; color: #8fa8d8;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="desk">
+
+    <div class="head">
+      <h1>办公位</h1>
+      <p>会话状态 —— 你走开一会儿回来，位置还在，接着干</p>
+    </div>
+
+    <div class="zone zone-desk">
+      <div class="zone-label">桌面 · 换一次会话就清空</div>
+      <div class="cards">
+        <div class="card card-desk">
+          <div class="name">台账</div>
+          <div class="real">会话历史</div>
+          <div class="desc">什么都往上记，全，但越积越厚</div>
+        </div>
+        <div class="card card-desk">
+          <div class="name">便签</div>
+          <div class="real">工作记忆</div>
+          <div class="desc">只记要点，贴在显示器边，随手可看</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="zone zone-wall">
+      <div class="zone-label">墙角 · 换多少次会话都还在</div>
+      <div class="cards">
+        <div class="card card-wall">
+          <div class="name">档案柜</div>
+          <div class="real">长期记忆</div>
+          <div class="desc">沉淀归档，锁在抽屉里</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="motto">桌面会清，柜子不空</div>
+
+  </div>
+</div>
+</body>
+</html>

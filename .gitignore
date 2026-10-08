@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+uv.lock
+
+# Packaging
+*.egg-info/
+build/
+dist/
+
+# Test and lint caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Local scratch space
+tmp/
+.worktrees/
+.pico/
+.mini-pico/
+artifacts/
+release/
+readme_intro_locked/
+
+# Local service binaries (jaeger, etc.)
+infra/
+
+# Local secrets and provider configuration
+.env
+.env.*
+!.env.example
+
+# Local docs not intended for publication
+docs/*
+!docs/agent-harness-v1-overview.md
+!docs/pico-review-pack.md
+!docs/pico-bugfix-log.md
+!docs/tracing/
+!docs/tracing/*
+
+# OS files
+.DS_Store
+
+# Packaging metadata
+pico.egg-info/
+tether.egg-info/
+
+# Benchmark run artifacts: generated workspaces carry their own nested git repos
+# and per-run session logs, so they are regenerated rather than committed.
+benchmarks/results/**/workspaces/
+benchmarks/results/**/harness-workspaces/
+benchmarks/results/**/runs/

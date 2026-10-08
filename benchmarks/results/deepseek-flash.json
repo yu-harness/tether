@@ -1,0 +1,4082 @@
+{
+  "benchmark": {
+    "source": "benchmarks\\coding_tasks.local.json",
+    "task_count": 18
+  },
+  "captured_at": "2026-10-05T10:27:46+0800",
+  "failure_category_counts": {
+    "failure_stop_reason": 1,
+    "verifier_failed": 8
+  },
+  "reproducibility": {
+    "decoding": {
+      "max_new_tokens": 2048,
+      "temperature": 0.2,
+      "top_p": 1.0
+    },
+    "fixture_snapshot_id": "sha256:c330e751622a276dacd4b3b2ebcfa98874259bb6d64008aff24dedc70b135de0",
+    "locale": "Chinese (Simplified)_China.936",
+    "model_name": "deepseek-flash",
+    "model_version": "",
+    "timezone": "Asia/Shanghai"
+  },
+  "rows": [
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:63196856afcd459cad75f233faca8bc2d9c0db0e31281afd7e100ccb852118e4",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 3,
+      "category": "documentation",
+      "expected_artifact": "README.md opening sentence is locked benchmark workspace text",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done. The README opening sentence now reads: \"This fixture is a locked benchmark workspace.\"",
+      "fixture_copy_relpath": "readme_intro_locked\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "readme_intro_locked",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "In the README fixture, replace the placeholder opening sentence with 'This fixture is a locked benchmark workspace.'",
+      "report": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_e44b8020",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done. The README opening sentence now reads: \"This fixture is a locked benchmark workspace.\"",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1152,
+          "current_request": {
+            "raw_chars": 116,
+            "rendered_chars": 116,
+            "section_chars": 138,
+            "text": "In the README fixture, replace the placeholder opening sentence with 'This fixture is a locked benchmark workspace.'"
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 582,
+            "rendered_chars": 582,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 570,
+          "input_tokens": 243,
+          "memory_chars": 218,
+          "output_tokens": 25,
+          "prefix_changed": true,
+          "prefix_chars": 5714,
+          "prefix_hash": "933a2d3a8f55b9aa5c6a4b8681e1cc299b77c5e0c1560d5768ae124578df6632",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "933a2d3a8f55b9aa5c6a4b8681e1cc299b77c5e0c1560d5768ae124578df6632",
+          "prompt_cache_supported": false,
+          "prompt_chars": 5040,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 92,
+            "rendered_chars": 92,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: # Bench Repo README | 2: | 3: This is a placeholder benchmark fixture."
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: # Bench Repo README | 2: | 3: This is a placeholder benchmark fixture."
+            ],
+            "selected_sources": [
+              "README.md"
+            ]
+          },
+          "request_chars": 116,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 426,
+              "rendered_chars": 400
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 138,
+              "rendered_chars": 138
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 582,
+              "rendered_chars": 582
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 218,
+              "rendered_chars": 218
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5714,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 92,
+              "rendered_chars": 92
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "total_tokens": 268,
+          "workspace_changed": true,
+          "workspace_chars": 3580,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "02537cb614c12fba011e725a8918337c73e81fbda5bd825399f5afefd5207bb9"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102644-75aaef",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102644-24fc19",
+        "task_state": {
+          "attempts": 3,
+          "checkpoint_id": "ckpt_e44b8020",
+          "final_answer": "Done. The README opening sentence now reads: \"This fixture is a locked benchmark workspace.\"",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102644-75aaef",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102644-24fc19",
+          "tool_steps": 2,
+          "user_request": "In the README fixture, replace the placeholder opening sentence with 'This fixture is a locked benchmark workspace.'"
+        },
+        "tool_steps": 2
+      },
+      "report_relpath": "readme_intro_locked\\bench_repo_readme\\.pico\\runs\\run_20261005-102644-75aaef\\report.json",
+      "run_dir_relpath": "readme_intro_locked\\bench_repo_readme\\.pico\\runs\\run_20261005-102644-75aaef",
+      "run_id": "run_20261005-102644-75aaef",
+      "status": "pass",
+      "step_budget": 4,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_e44b8020",
+        "final_answer": "Done. The README opening sentence now reads: \"This fixture is a locked benchmark workspace.\"",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102644-75aaef",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102644-24fc19",
+        "tool_steps": 2,
+        "user_request": "In the README fixture, replace the placeholder opening sentence with 'This fixture is a locked benchmark workspace.'"
+      },
+      "task_state_relpath": "readme_intro_locked\\bench_repo_readme\\.pico\\runs\\run_20261005-102644-75aaef\\task_state.json",
+      "tool_steps": 2,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 3,
+        "loop_depth_ratio": 0.75,
+        "retry_count": 0,
+        "tool_calls": 2,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('README.md').read_text(encoding='utf-8'); assert 'This fixture is a locked benchmark workspace.' in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:59fbb9743e934af1227bf95ae0c2eac409cac40ff2a0f2dc350462a11a0b5e82",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 4,
+      "category": "documentation",
+      "expected_artifact": "README.md contains the schema and baseline note",
+      "expected_artifact_exists": true,
+      "failure_category": "verifier_failed",
+      "final_answer": "Stopped after reaching the step limit without a final answer.",
+      "fixture_copy_relpath": "readme_schema_note\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "readme_schema_note",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": false,
+      "passed": false,
+      "prompt": "Replace the first README bullet with a sentence that says the benchmark schema and baseline are fixed.",
+      "report": {
+        "attempts": 4,
+        "checkpoint_id": "ckpt_574ac5cc",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Stopped after reaching the step limit without a final answer.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1152,
+          "current_request": {
+            "raw_chars": 102,
+            "rendered_chars": 102,
+            "section_chars": 124,
+            "text": "Replace the first README bullet with a sentence that says the benchmark schema and baseline are fixed."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 592,
+            "rendered_chars": 592,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 580,
+          "input_tokens": 210,
+          "memory_chars": 196,
+          "output_tokens": 70,
+          "prefix_changed": false,
+          "prefix_chars": 5707,
+          "prefix_hash": "be011ddb6a2e4be1af899a52db17d6168e9ac2abcf97c1cdcef25fefd31957d4",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "be011ddb6a2e4be1af899a52db17d6168e9ac2abcf97c1cdcef25fefd31957d4",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4926,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 102,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 381,
+              "rendered_chars": 381
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 124,
+              "rendered_chars": 124
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 592,
+              "rendered_chars": 592
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 196,
+              "rendered_chars": 196
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5707,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "total_tokens": 280,
+          "workspace_changed": false,
+          "workspace_chars": 3573,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "c946d30345cf455673fb73cdf4efc1e4cfc84626609999ad2370bebcec46b297"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102648-6585bf",
+        "status": "stopped",
+        "stop_reason": "step_limit_reached",
+        "task_id": "task_20261005-102648-08fdd6",
+        "task_state": {
+          "attempts": 4,
+          "checkpoint_id": "ckpt_574ac5cc",
+          "final_answer": "Stopped after reaching the step limit without a final answer.",
+          "last_tool": "read_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102648-6585bf",
+          "status": "stopped",
+          "stop_reason": "step_limit_reached",
+          "task_id": "task_20261005-102648-08fdd6",
+          "tool_steps": 4,
+          "user_request": "Replace the first README bullet with a sentence that says the benchmark schema and baseline are fixed."
+        },
+        "tool_steps": 4
+      },
+      "report_relpath": "readme_schema_note\\bench_repo_readme\\.pico\\runs\\run_20261005-102648-6585bf\\report.json",
+      "run_dir_relpath": "readme_schema_note\\bench_repo_readme\\.pico\\runs\\run_20261005-102648-6585bf",
+      "run_id": "run_20261005-102648-6585bf",
+      "status": "fail",
+      "step_budget": 4,
+      "stop_reason": "step_limit_reached",
+      "task_state": {
+        "attempts": 4,
+        "checkpoint_id": "ckpt_574ac5cc",
+        "final_answer": "Stopped after reaching the step limit without a final answer.",
+        "last_tool": "read_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102648-6585bf",
+        "status": "stopped",
+        "stop_reason": "step_limit_reached",
+        "task_id": "task_20261005-102648-08fdd6",
+        "tool_steps": 4,
+        "user_request": "Replace the first README bullet with a sentence that says the benchmark schema and baseline are fixed."
+      },
+      "task_state_relpath": "readme_schema_note\\bench_repo_readme\\.pico\\runs\\run_20261005-102648-6585bf\\task_state.json",
+      "tool_steps": 4,
+      "trajectory": {
+        "invalid_tool_calls": 4,
+        "loop_depth": 4,
+        "loop_depth_ratio": 1.0,
+        "retry_count": 0,
+        "tool_calls": 4,
+        "tool_selection_accuracy": 0.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('README.md').read_text(encoding='utf-8'); assert 'schema and baseline are fixed' in text\"",
+      "verifier_exit_code": 1,
+      "verifier_passed": false,
+      "verifier_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from pathlib import Path; text = Path('README.md').read_text(encoding='utf-8'); assert 'schema and baseline are fixed' in text\n                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:e8d7526c3da15e9570bc6db4f097e672ef50b1c19e82de5b4c074d9e87362e2e",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 3,
+      "category": "text-edit",
+      "expected_artifact": "sample.txt contains beta-locked",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Already done: sample.txt now contains `beta-locked` on line 2.",
+      "fixture_copy_relpath": "sample_beta_locked\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "sample_beta_locked",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "In sample.txt, replace beta with beta-locked.",
+      "report": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_8abb3bcb",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Already done: sample.txt now contains `beta-locked` on line 2.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1149,
+          "current_request": {
+            "raw_chars": 45,
+            "rendered_chars": 45,
+            "section_chars": 67,
+            "text": "In sample.txt, replace beta with beta-locked."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 300,
+            "rendered_chars": 300,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 288,
+          "input_tokens": 134,
+          "memory_chars": 148,
+          "output_tokens": 22,
+          "prefix_changed": false,
+          "prefix_chars": 5462,
+          "prefix_hash": "ab5cc5bc8f2476c3db4915d4e30e3730557eed752f8332446cac47f0e12a15eb",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "ab5cc5bc8f2476c3db4915d4e30e3730557eed752f8332446cac47f0e12a15eb",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4450,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 48,
+            "rendered_chars": 48,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_sources": [
+              "sample.txt"
+            ]
+          },
+          "request_chars": 45,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 277,
+              "rendered_chars": 277
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 67,
+              "rendered_chars": 67
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 300,
+              "rendered_chars": 300
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 148,
+              "rendered_chars": 148
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5462,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 48,
+              "rendered_chars": 48
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "total_tokens": 156,
+          "workspace_changed": false,
+          "workspace_chars": 3328,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "76b9ddd1291d2dd9e4af2c67f2ccfc7c5c45edd91df42ba371d23efeca6a8bf3"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102652-05b32c",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102652-33b143",
+        "task_state": {
+          "attempts": 3,
+          "checkpoint_id": "ckpt_8abb3bcb",
+          "final_answer": "Already done: sample.txt now contains `beta-locked` on line 2.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102652-05b32c",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102652-33b143",
+          "tool_steps": 2,
+          "user_request": "In sample.txt, replace beta with beta-locked."
+        },
+        "tool_steps": 2
+      },
+      "report_relpath": "sample_beta_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102652-05b32c\\report.json",
+      "run_dir_relpath": "sample_beta_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102652-05b32c",
+      "run_id": "run_20261005-102652-05b32c",
+      "status": "pass",
+      "step_budget": 4,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_8abb3bcb",
+        "final_answer": "Already done: sample.txt now contains `beta-locked` on line 2.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102652-05b32c",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102652-33b143",
+        "tool_steps": 2,
+        "user_request": "In sample.txt, replace beta with beta-locked."
+      },
+      "task_state_relpath": "sample_beta_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102652-05b32c\\task_state.json",
+      "tool_steps": 2,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 3,
+        "loop_depth_ratio": 0.75,
+        "retry_count": 0,
+        "tool_calls": 2,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'beta-locked' in text and '\\nbeta\\n' not in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:3d30e7712c8f62c1a30f60f805195f645c7b9b49f8d64cfbe14c7c4a3eba9f90",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 3,
+      "category": "text-edit",
+      "expected_artifact": "sample.txt contains gamma-locked",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Already done: `sample.txt` line 3 now reads `gamma-locked`.",
+      "fixture_copy_relpath": "sample_gamma_locked\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "sample_gamma_locked",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "In sample.txt, replace gamma with gamma-locked.",
+      "report": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_35d57252",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Already done: `sample.txt` line 3 now reads `gamma-locked`.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1149,
+          "current_request": {
+            "raw_chars": 47,
+            "rendered_chars": 47,
+            "section_chars": 69,
+            "text": "In sample.txt, replace gamma with gamma-locked."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 304,
+            "rendered_chars": 304,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 292,
+          "input_tokens": 134,
+          "memory_chars": 150,
+          "output_tokens": 23,
+          "prefix_changed": false,
+          "prefix_chars": 5463,
+          "prefix_hash": "f47d7a0958fb3f0092b900a202866699d9f37b17a5c3cb02da4458a1092699fe",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "f47d7a0958fb3f0092b900a202866699d9f37b17a5c3cb02da4458a1092699fe",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4462,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 48,
+            "rendered_chars": 48,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_sources": [
+              "sample.txt"
+            ]
+          },
+          "request_chars": 47,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 281,
+              "rendered_chars": 281
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 69,
+              "rendered_chars": 69
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 304,
+              "rendered_chars": 304
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 150,
+              "rendered_chars": 150
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5463,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 48,
+              "rendered_chars": 48
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "total_tokens": 157,
+          "workspace_changed": false,
+          "workspace_chars": 3329,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "a7c6ddb13c8efb34f9fc0088853c4b31774862fa78d24816f81a210860a712cc"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102655-655c79",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102655-683898",
+        "task_state": {
+          "attempts": 3,
+          "checkpoint_id": "ckpt_35d57252",
+          "final_answer": "Already done: `sample.txt` line 3 now reads `gamma-locked`.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102655-655c79",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102655-683898",
+          "tool_steps": 2,
+          "user_request": "In sample.txt, replace gamma with gamma-locked."
+        },
+        "tool_steps": 2
+      },
+      "report_relpath": "sample_gamma_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102655-655c79\\report.json",
+      "run_dir_relpath": "sample_gamma_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102655-655c79",
+      "run_id": "run_20261005-102655-655c79",
+      "status": "pass",
+      "step_budget": 4,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_35d57252",
+        "final_answer": "Already done: `sample.txt` line 3 now reads `gamma-locked`.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102655-655c79",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102655-683898",
+        "tool_steps": 2,
+        "user_request": "In sample.txt, replace gamma with gamma-locked."
+      },
+      "task_state_relpath": "sample_gamma_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102655-655c79\\task_state.json",
+      "tool_steps": 2,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 3,
+        "loop_depth_ratio": 0.75,
+        "retry_count": 0,
+        "tool_calls": 2,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'gamma-locked' in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "patch_file",
+        "read_file"
+      ],
+      "artifact_digest": "sha256:8d2002cef8229434d0ac70516b58d9cd5aa4b399a278f87861d9d7a5de5450f0",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 4,
+      "category": "tool-boundary",
+      "expected_artifact": "README.md reflects recovery after invalid patch args",
+      "expected_artifact_exists": true,
+      "failure_category": "verifier_failed",
+      "final_answer": "README.md has been patched successfully. The placeholder line was replaced with the fixture description plus a new \"Recovery\" section noting the patch completed after recovering from invalid patch arguments.",
+      "fixture_copy_relpath": "invalid_patch_recovery\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "invalid_patch_recovery",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": false,
+      "prompt": "Recover after invalid patch arguments and finish the README patch.",
+      "report": {
+        "attempts": 4,
+        "checkpoint_id": "ckpt_d53129f5",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "README.md has been patched successfully. The placeholder line was replaced with the fixture description plus a new \"Recovery\" section noting the patch completed after recovering from invalid patch arguments.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1024,
+          "current_request": {
+            "raw_chars": 66,
+            "rendered_chars": 66,
+            "section_chars": 88,
+            "text": "Recover after invalid patch arguments and finish the README patch."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 910,
+            "rendered_chars": 910,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 898,
+          "input_tokens": 441,
+          "memory_chars": 168,
+          "output_tokens": 42,
+          "prefix_changed": true,
+          "prefix_chars": 5820,
+          "prefix_hash": "362995cc2a301333c9009eccdbf31bd69ec6d43d277171b71b11ad33937b7e36",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "362995cc2a301333c9009eccdbf31bd69ec6d43d277171b71b11ad33937b7e36",
+          "prompt_cache_supported": false,
+          "prompt_chars": 5194,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 92,
+            "rendered_chars": 92,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: # Bench Repo README | 2: | 3: This is a placeholder benchmark fixture."
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: # Bench Repo README | 2: | 3: This is a placeholder benchmark fixture."
+            ],
+            "selected_sources": [
+              "README.md"
+            ]
+          },
+          "request_chars": 66,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 326,
+              "rendered_chars": 326
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 88,
+              "rendered_chars": 88
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 910,
+              "rendered_chars": 910
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 168,
+              "rendered_chars": 168
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5820,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 92,
+              "rendered_chars": 92
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "total_tokens": 483,
+          "workspace_changed": true,
+          "workspace_chars": 3686,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "653d71f9f013ef31d9f3af29b2a26330d40c2a64489683feb7e57be4ac79ff4a"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102659-4551b9",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102659-b44834",
+        "task_state": {
+          "attempts": 4,
+          "checkpoint_id": "ckpt_d53129f5",
+          "final_answer": "README.md has been patched successfully. The placeholder line was replaced with the fixture description plus a new \"Recovery\" section noting the patch completed after recovering from invalid patch arguments.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102659-4551b9",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102659-b44834",
+          "tool_steps": 3,
+          "user_request": "Recover after invalid patch arguments and finish the README patch."
+        },
+        "tool_steps": 3
+      },
+      "report_relpath": "invalid_patch_recovery\\bench_repo_readme\\.pico\\runs\\run_20261005-102659-4551b9\\report.json",
+      "run_dir_relpath": "invalid_patch_recovery\\bench_repo_readme\\.pico\\runs\\run_20261005-102659-4551b9",
+      "run_id": "run_20261005-102659-4551b9",
+      "status": "fail",
+      "step_budget": 5,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 4,
+        "checkpoint_id": "ckpt_d53129f5",
+        "final_answer": "README.md has been patched successfully. The placeholder line was replaced with the fixture description plus a new \"Recovery\" section noting the patch completed after recovering from invalid patch arguments.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102659-4551b9",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102659-b44834",
+        "tool_steps": 3,
+        "user_request": "Recover after invalid patch arguments and finish the README patch."
+      },
+      "task_state_relpath": "invalid_patch_recovery\\bench_repo_readme\\.pico\\runs\\run_20261005-102659-4551b9\\task_state.json",
+      "tool_steps": 3,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 4,
+        "loop_depth_ratio": 0.8,
+        "retry_count": 0,
+        "tool_calls": 3,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('README.md').read_text(encoding='utf-8'); assert 'recovered after invalid patch args' in text\"",
+      "verifier_exit_code": 1,
+      "verifier_passed": false,
+      "verifier_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from pathlib import Path; text = Path('README.md').read_text(encoding='utf-8'); assert 'recovered after invalid patch args' in text\n                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:23819d922ab82f8b2de971fcd502052b14d6452351cc204f2dce10f3e9e827cf",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 3,
+      "category": "tool-boundary",
+      "expected_artifact": "sample.txt reflects recovery after path escape rejection",
+      "expected_artifact_exists": true,
+      "failure_category": "verifier_failed",
+      "final_answer": "I can\u2019t perform a path escape attempt. I can still patch `sample.txt` within the workspace if you tell me the exact change you want. Current contents are:\n\n```text\nalpha\nbeta\ngamma\nplaceholder\n```\n\nFor example, I can replace `placeholder` with `delta` or update any specific line.",
+      "fixture_copy_relpath": "path_escape_recovery\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "path_escape_recovery",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": false,
+      "prompt": "Reject a path escape attempt and still finish the sample.txt patch.",
+      "report": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_a58f41ef",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "I can\u2019t perform a path escape attempt. I can still patch `sample.txt` within the workspace if you tell me the exact change you want. Current contents are:\n\n```text\nalpha\nbeta\ngamma\nplaceholder\n```\n\nFor example, I can replace `placeholder` with `delta` or update any specific line.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1024,
+          "current_request": {
+            "raw_chars": 67,
+            "rendered_chars": 67,
+            "section_chars": 89,
+            "text": "Reject a path escape attempt and still finish the sample.txt patch."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 299,
+            "rendered_chars": 299,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 287,
+          "input_tokens": 284,
+          "memory_chars": 214,
+          "output_tokens": 71,
+          "prefix_changed": false,
+          "prefix_chars": 5464,
+          "prefix_hash": "0c42294e6adfb1181533a3000a8c64d68d5dae56cee77807f1c89ffc5cb05074",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "0c42294e6adfb1181533a3000a8c64d68d5dae56cee77807f1c89ffc5cb05074",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4580,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 48,
+            "rendered_chars": 48,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_sources": [
+              "sample.txt"
+            ]
+          },
+          "request_chars": 67,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 320,
+              "rendered_chars": 320
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 89,
+              "rendered_chars": 89
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 299,
+              "rendered_chars": 299
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 214,
+              "rendered_chars": 214
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5464,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 48,
+              "rendered_chars": 48
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "total_tokens": 355,
+          "workspace_changed": false,
+          "workspace_chars": 3330,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "3d614810aac89ed8ca87ab46c73f8cbc4706e213e159aecbdc70d23c6c93cecd"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102704-94c39b",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102704-79ab9f",
+        "task_state": {
+          "attempts": 3,
+          "checkpoint_id": "ckpt_a58f41ef",
+          "final_answer": "I can\u2019t perform a path escape attempt. I can still patch `sample.txt` within the workspace if you tell me the exact change you want. Current contents are:\n\n```text\nalpha\nbeta\ngamma\nplaceholder\n```\n\nFor example, I can replace `placeholder` with `delta` or update any specific line.",
+          "last_tool": "read_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102704-94c39b",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102704-79ab9f",
+          "tool_steps": 2,
+          "user_request": "Reject a path escape attempt and still finish the sample.txt patch."
+        },
+        "tool_steps": 2
+      },
+      "report_relpath": "path_escape_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102704-94c39b\\report.json",
+      "run_dir_relpath": "path_escape_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102704-94c39b",
+      "run_id": "run_20261005-102704-94c39b",
+      "status": "fail",
+      "step_budget": 5,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_a58f41ef",
+        "final_answer": "I can\u2019t perform a path escape attempt. I can still patch `sample.txt` within the workspace if you tell me the exact change you want. Current contents are:\n\n```text\nalpha\nbeta\ngamma\nplaceholder\n```\n\nFor example, I can replace `placeholder` with `delta` or update any specific line.",
+        "last_tool": "read_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102704-94c39b",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102704-79ab9f",
+        "tool_steps": 2,
+        "user_request": "Reject a path escape attempt and still finish the sample.txt patch."
+      },
+      "task_state_relpath": "path_escape_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102704-94c39b\\task_state.json",
+      "tool_steps": 2,
+      "trajectory": {
+        "invalid_tool_calls": 1,
+        "loop_depth": 3,
+        "loop_depth_ratio": 0.6,
+        "retry_count": 0,
+        "tool_calls": 2,
+        "tool_selection_accuracy": 0.5
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'alpha-guarded' in text\"",
+      "verifier_exit_code": 1,
+      "verifier_passed": false,
+      "verifier_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'alpha-guarded' in text\n                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:a4ab1eca11f45e1e924b4bf79e42a9bef4d644bf189a598c55396ed66b55280a",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 3,
+      "category": "tool-boundary",
+      "expected_artifact": "sample.txt reflects recovery after repeated identical read rejection",
+      "expected_artifact_exists": true,
+      "failure_category": "verifier_failed",
+      "final_answer": "Recovered. The repeated read of `sample.txt` was already followed by the successful patch: `placeholder` was replaced with `patched`. No further action is needed.",
+      "fixture_copy_relpath": "repeated_read_recovery\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "repeated_read_recovery",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": false,
+      "prompt": "Recover after repeated identical reads and still finish the sample.txt patch.",
+      "report": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_14637d5b",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Recovered. The repeated read of `sample.txt` was already followed by the successful patch: `placeholder` was replaced with `patched`. No further action is needed.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1152,
+          "current_request": {
+            "raw_chars": 77,
+            "rendered_chars": 77,
+            "section_chars": 99,
+            "text": "Recover after repeated identical reads and still finish the sample.txt patch."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 335,
+            "rendered_chars": 335,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 323,
+          "input_tokens": 145,
+          "memory_chars": 180,
+          "output_tokens": 41,
+          "prefix_changed": false,
+          "prefix_chars": 5466,
+          "prefix_hash": "92e2a64fa02051db776344be0e9211866b23baba4294b5e781b943f94f6db6b4",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "92e2a64fa02051db776344be0e9211866b23baba4294b5e781b943f94f6db6b4",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4613,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 48,
+            "rendered_chars": 48,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_sources": [
+              "sample.txt"
+            ]
+          },
+          "request_chars": 77,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 341,
+              "rendered_chars": 341
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 99,
+              "rendered_chars": 99
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 335,
+              "rendered_chars": 335
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 180,
+              "rendered_chars": 180
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5466,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 48,
+              "rendered_chars": 48
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "total_tokens": 186,
+          "workspace_changed": false,
+          "workspace_chars": 3332,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "628a7ffdb7b818ed739b9e63225b31b09b372a1845da9dfaf1f8fab47c864381"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102708-6b0633",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102708-23e6b2",
+        "task_state": {
+          "attempts": 3,
+          "checkpoint_id": "ckpt_14637d5b",
+          "final_answer": "Recovered. The repeated read of `sample.txt` was already followed by the successful patch: `placeholder` was replaced with `patched`. No further action is needed.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102708-6b0633",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102708-23e6b2",
+          "tool_steps": 2,
+          "user_request": "Recover after repeated identical reads and still finish the sample.txt patch."
+        },
+        "tool_steps": 2
+      },
+      "report_relpath": "repeated_read_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102708-6b0633\\report.json",
+      "run_dir_relpath": "repeated_read_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102708-6b0633",
+      "run_id": "run_20261005-102708-6b0633",
+      "status": "fail",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_14637d5b",
+        "final_answer": "Recovered. The repeated read of `sample.txt` was already followed by the successful patch: `placeholder` was replaced with `patched`. No further action is needed.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102708-6b0633",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102708-23e6b2",
+        "tool_steps": 2,
+        "user_request": "Recover after repeated identical reads and still finish the sample.txt patch."
+      },
+      "task_state_relpath": "repeated_read_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102708-6b0633\\task_state.json",
+      "tool_steps": 2,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 3,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 2,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'repeat-guarded' in text\"",
+      "verifier_exit_code": 1,
+      "verifier_passed": false,
+      "verifier_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'repeat-guarded' in text\n                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:59fbb9743e934af1227bf95ae0c2eac409cac40ff2a0f2dc350462a11a0b5e82",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 3,
+      "category": "recovery",
+      "expected_artifact": "README.md remains available while context reduction creates a checkpoint",
+      "expected_artifact_exists": true,
+      "failure_category": "failure_stop_reason",
+      "final_answer": "Stopped after reaching the step limit without a final answer.",
+      "fixture_copy_relpath": "context_reduction_checkpoint\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "context_reduction_checkpoint",
+      "initial_episodic_notes_empty": false,
+      "initial_history_empty": false,
+      "initial_memory_empty": false,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": false,
+      "passed": false,
+      "prompt": "Finish the README update after prompt compression creates a checkpoint.",
+      "report": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_fb07165f",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Stopped after reaching the step limit without a final answer.",
+        "prompt_metadata": {
+          "budget_reductions": [
+            {
+              "after_chars": 200,
+              "before_chars": 800,
+              "overflow_chars": 2834,
+              "section": "relevant_memory"
+            },
+            {
+              "after_chars": 600,
+              "before_chars": 2400,
+              "overflow_chars": 2834,
+              "section": "history"
+            },
+            {
+              "after_chars": 200,
+              "before_chars": 800,
+              "overflow_chars": 1482,
+              "section": "memory"
+            },
+            {
+              "after_chars": 200,
+              "before_chars": 800,
+              "overflow_chars": 1422,
+              "section": "prefix"
+            }
+          ],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 128,
+          "current_request": {
+            "raw_chars": 71,
+            "rendered_chars": 71,
+            "section_chars": 93,
+            "text": "Finish the README update after prompt compression creates a checkpoint."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 3572,
+            "rendered_chars": 600,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 3596,
+          "input_tokens": 255,
+          "memory_chars": 260,
+          "output_tokens": 69,
+          "prefix_changed": false,
+          "prefix_chars": 5613,
+          "prefix_hash": "dd6d57702072e8cad33d47630fe02784bdb726fd3d1c1354ed7102a2c78fea53",
+          "prompt_budget_chars": 700,
+          "prompt_cache_key": "dd6d57702072e8cad33d47630fe02784bdb726fd3d1c1354ed7102a2c78fea53",
+          "prompt_cache_supported": false,
+          "prompt_chars": 1522,
+          "prompt_over_budget": true,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 92,
+            "rendered_chars": 92,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: # Bench Repo README | 2: | 3: This is a placeholder benchmark fixture."
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: # Bench Repo README | 2: | 3: This is a placeholder benchmark fixture."
+            ],
+            "selected_sources": [
+              "README.md"
+            ]
+          },
+          "request_chars": 71,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 0,
+            "current_request": null,
+            "history": 600,
+            "memory": 200,
+            "prefix": 200,
+            "relevant_memory": 200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 0,
+              "raw_chars": 327,
+              "rendered_chars": 327
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 93,
+              "rendered_chars": 93
+            },
+            "history": {
+              "budget_chars": 600,
+              "raw_chars": 3572,
+              "rendered_chars": 600
+            },
+            "memory": {
+              "budget_chars": 200,
+              "raw_chars": 260,
+              "rendered_chars": 200
+            },
+            "prefix": {
+              "budget_chars": 200,
+              "raw_chars": 5613,
+              "rendered_chars": 200
+            },
+            "relevant_memory": {
+              "budget_chars": 200,
+              "raw_chars": 92,
+              "rendered_chars": 92
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 324,
+          "workspace_changed": false,
+          "workspace_chars": 3593,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "2f11ad2eece756fa0f0969dcb88b1323d1a81522396f630489ba156ea2655903"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102713-1d7a5d",
+        "status": "stopped",
+        "stop_reason": "step_limit_reached",
+        "task_id": "task_20261005-102713-ad555e",
+        "task_state": {
+          "attempts": 3,
+          "checkpoint_id": "ckpt_fb07165f",
+          "final_answer": "Stopped after reaching the step limit without a final answer.",
+          "last_tool": "write_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102713-1d7a5d",
+          "status": "stopped",
+          "stop_reason": "step_limit_reached",
+          "task_id": "task_20261005-102713-ad555e",
+          "tool_steps": 2,
+          "user_request": "Finish the README update after prompt compression creates a checkpoint."
+        },
+        "tool_steps": 2
+      },
+      "report_relpath": "context_reduction_checkpoint\\bench_repo_readme\\.pico\\runs\\run_20261005-102713-1d7a5d\\report.json",
+      "run_dir_relpath": "context_reduction_checkpoint\\bench_repo_readme\\.pico\\runs\\run_20261005-102713-1d7a5d",
+      "run_id": "run_20261005-102713-1d7a5d",
+      "status": "fail",
+      "step_budget": 2,
+      "stop_reason": "step_limit_reached",
+      "task_state": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_fb07165f",
+        "final_answer": "Stopped after reaching the step limit without a final answer.",
+        "last_tool": "write_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102713-1d7a5d",
+        "status": "stopped",
+        "stop_reason": "step_limit_reached",
+        "task_id": "task_20261005-102713-ad555e",
+        "tool_steps": 2,
+        "user_request": "Finish the README update after prompt compression creates a checkpoint."
+      },
+      "task_state_relpath": "context_reduction_checkpoint\\bench_repo_readme\\.pico\\runs\\run_20261005-102713-1d7a5d\\task_state.json",
+      "tool_steps": 2,
+      "trajectory": {
+        "invalid_tool_calls": 1,
+        "loop_depth": 3,
+        "loop_depth_ratio": 1.5,
+        "retry_count": 1,
+        "tool_calls": 2,
+        "tool_selection_accuracy": 0.3333333333333333
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); trace = [json.loads(line) for line in next(Path('.pico/runs').glob('*/trace.jsonl')).read_text(encoding='utf-8').splitlines()]; assert report['checkpoint_id']; assert any(event.get('event') == 'checkpoint_created' and event.get('trigger') == 'context_reduction' for event in trace)\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:4f02ab2cb053f7a45a59ded413b10fb22ffc9e09487b655573f8497bf141bad9",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 2,
+      "category": "recovery",
+      "expected_artifact": "sample.txt exists after stale freshness recovery",
+      "expected_artifact_exists": true,
+      "failure_category": "verifier_failed",
+      "final_answer": "The stale benchmark task is complete. I verified the actual workspace state by reading `sample.txt`, which currently contains:\n\n```\nalpha\nbeta\ngamma\nstale-updated\n```\n\nNo further action is needed unless you want me to modify this file or perform a specific next step.",
+      "fixture_copy_relpath": "freshness_reanchor_resume\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "freshness_reanchor_resume",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": false,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": false,
+      "prompt": "Resume the stale benchmark task and finish without trusting the old summary.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_64345f18",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "The stale benchmark task is complete. I verified the actual workspace state by reading `sample.txt`, which currently contains:\n\n```\nalpha\nbeta\ngamma\nstale-updated\n```\n\nNo further action is needed unless you want me to modify this file or perform a specific next step.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1024,
+          "current_request": {
+            "raw_chars": 76,
+            "rendered_chars": 76,
+            "section_chars": 98,
+            "text": "Resume the stale benchmark task and finish without trusting the old summary."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 227,
+            "rendered_chars": 227,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 215,
+          "input_tokens": 255,
+          "memory_chars": 223,
+          "output_tokens": 60,
+          "prefix_changed": false,
+          "prefix_chars": 5355,
+          "prefix_hash": "4ff8665c019fae0f360f9b78656c0d0c7017cc77ad64bbdc824e043b75ae0b66",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "4ff8665c019fae0f360f9b78656c0d0c7017cc77ad64bbdc824e043b75ae0b66",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4519,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 76,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 338,
+              "rendered_chars": 338
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 98,
+              "rendered_chars": 98
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 227,
+              "rendered_chars": 227
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 223,
+              "rendered_chars": 223
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5355,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 315,
+          "workspace_changed": false,
+          "workspace_chars": 3335,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "470210c3311195d7c494cfcbfc324f8568a489d657d8fd8daf89e9ec0d5669bf"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102717-eb5777",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102717-f1da56",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_64345f18",
+          "final_answer": "The stale benchmark task is complete. I verified the actual workspace state by reading `sample.txt`, which currently contains:\n\n```\nalpha\nbeta\ngamma\nstale-updated\n```\n\nNo further action is needed unless you want me to modify this file or perform a specific next step.",
+          "last_tool": "read_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102717-eb5777",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102717-f1da56",
+          "tool_steps": 1,
+          "user_request": "Resume the stale benchmark task and finish without trusting the old summary."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "freshness_reanchor_resume\\bench_repo_patch\\.pico\\runs\\run_20261005-102717-eb5777\\report.json",
+      "run_dir_relpath": "freshness_reanchor_resume\\bench_repo_patch\\.pico\\runs\\run_20261005-102717-eb5777",
+      "run_id": "run_20261005-102717-eb5777",
+      "status": "fail",
+      "step_budget": 3,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_64345f18",
+        "final_answer": "The stale benchmark task is complete. I verified the actual workspace state by reading `sample.txt`, which currently contains:\n\n```\nalpha\nbeta\ngamma\nstale-updated\n```\n\nNo further action is needed unless you want me to modify this file or perform a specific next step.",
+        "last_tool": "read_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102717-eb5777",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102717-f1da56",
+        "tool_steps": 1,
+        "user_request": "Resume the stale benchmark task and finish without trusting the old summary."
+      },
+      "task_state_relpath": "freshness_reanchor_resume\\bench_repo_patch\\.pico\\runs\\run_20261005-102717-eb5777\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.6666666666666666,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); trace = [json.loads(line) for line in next(Path('.pico/runs').glob('*/trace.jsonl')).read_text(encoding='utf-8').splitlines()]; assert report['prompt_metadata']['resume_status'] == 'partial-stale'; assert any(event.get('event') == 'checkpoint_created' and event.get('trigger') == 'freshness_mismatch' for event in trace)\"",
+      "verifier_exit_code": 1,
+      "verifier_passed": false,
+      "verifier_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); trace = [json.loads(line) for line in next(Path('.pico/runs').glob('*/trace.jsonl')).read_text(encoding='utf-8').splitlines()]; assert report['prompt_metadata']['resume_status'] == 'partial-stale'; assert any(event.get('event') == 'checkpoint_created' and event.get('trigger') == 'freshness_mismatch' for event in trace)\n                                                                                                                                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:59fbb9743e934af1227bf95ae0c2eac409cac40ff2a0f2dc350462a11a0b5e82",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 3,
+      "category": "recovery",
+      "expected_artifact": "README.md exists after workspace mismatch recovery",
+      "expected_artifact_exists": true,
+      "failure_category": "verifier_failed",
+      "final_answer": "Resumed. The workspace is intact at `bench_repo_readme`; `README.md` is a placeholder benchmark fixture with no actionable code or tests. Runtime state is rebuilt and there is no blocker. Next action: provide a concrete task or target file to work on.",
+      "fixture_copy_relpath": "workspace_mismatch_resume\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "workspace_mismatch_resume",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": false,
+      "prompt": "Resume after benchmark workspace drift and rebuild runtime state.",
+      "report": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_51b014ee",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Resumed. The workspace is intact at `bench_repo_readme`; `README.md` is a placeholder benchmark fixture with no actionable code or tests. Runtime state is rebuilt and there is no blocker. Next action: provide a concrete task or target file to work on.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1152,
+          "current_request": {
+            "raw_chars": 65,
+            "rendered_chars": 65,
+            "section_chars": 87,
+            "text": "Resume after benchmark workspace drift and rebuild runtime state."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 559,
+            "rendered_chars": 559,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 547,
+          "input_tokens": 252,
+          "memory_chars": 254,
+          "output_tokens": 61,
+          "prefix_changed": false,
+          "prefix_chars": 5607,
+          "prefix_hash": "f740b22392b5411bb9c3b7642f82f31283c8c21108ddb7b4c8487e519c6516a2",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "f740b22392b5411bb9c3b7642f82f31283c8c21108ddb7b4c8487e519c6516a2",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4917,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 92,
+            "rendered_chars": 92,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: # Bench Repo README | 2: | 3: This is a placeholder benchmark fixture."
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: # Bench Repo README | 2: | 3: This is a placeholder benchmark fixture."
+            ],
+            "selected_sources": [
+              "README.md"
+            ]
+          },
+          "request_chars": 65,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 315,
+              "rendered_chars": 315
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 87,
+              "rendered_chars": 87
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 559,
+              "rendered_chars": 559
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 254,
+              "rendered_chars": 254
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5607,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 92,
+              "rendered_chars": 92
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 313,
+          "workspace_changed": false,
+          "workspace_chars": 3587,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "2c069f35bc3311a16f614970c22c52ad5cc151c4cca3bddcd80f880b6ffd41d7"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102720-0a1459",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102720-379253",
+        "task_state": {
+          "attempts": 3,
+          "checkpoint_id": "ckpt_51b014ee",
+          "final_answer": "Resumed. The workspace is intact at `bench_repo_readme`; `README.md` is a placeholder benchmark fixture with no actionable code or tests. Runtime state is rebuilt and there is no blocker. Next action: provide a concrete task or target file to work on.",
+          "last_tool": "read_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102720-0a1459",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102720-379253",
+          "tool_steps": 2,
+          "user_request": "Resume after benchmark workspace drift and rebuild runtime state."
+        },
+        "tool_steps": 2
+      },
+      "report_relpath": "workspace_mismatch_resume\\bench_repo_readme\\.pico\\runs\\run_20261005-102720-0a1459\\report.json",
+      "run_dir_relpath": "workspace_mismatch_resume\\bench_repo_readme\\.pico\\runs\\run_20261005-102720-0a1459",
+      "run_id": "run_20261005-102720-0a1459",
+      "status": "fail",
+      "step_budget": 3,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_51b014ee",
+        "final_answer": "Resumed. The workspace is intact at `bench_repo_readme`; `README.md` is a placeholder benchmark fixture with no actionable code or tests. Runtime state is rebuilt and there is no blocker. Next action: provide a concrete task or target file to work on.",
+        "last_tool": "read_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102720-0a1459",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102720-379253",
+        "tool_steps": 2,
+        "user_request": "Resume after benchmark workspace drift and rebuild runtime state."
+      },
+      "task_state_relpath": "workspace_mismatch_resume\\bench_repo_readme\\.pico\\runs\\run_20261005-102720-0a1459\\task_state.json",
+      "tool_steps": 2,
+      "trajectory": {
+        "invalid_tool_calls": 1,
+        "loop_depth": 3,
+        "loop_depth_ratio": 1.0,
+        "retry_count": 0,
+        "tool_calls": 2,
+        "tool_selection_accuracy": 0.5
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); trace = [json.loads(line) for line in next(Path('.pico/runs').glob('*/trace.jsonl')).read_text(encoding='utf-8').splitlines()]; assert report['prompt_metadata']['resume_status'] == 'workspace-mismatch'; assert any(event.get('event') == 'runtime_identity_mismatch' for event in trace)\"",
+      "verifier_exit_code": 1,
+      "verifier_passed": false,
+      "verifier_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); trace = [json.loads(line) for line in next(Path('.pico/runs').glob('*/trace.jsonl')).read_text(encoding='utf-8').splitlines()]; assert report['prompt_metadata']['resume_status'] == 'workspace-mismatch'; assert any(event.get('event') == 'runtime_identity_mismatch' for event in trace)\n                                                                                                                                                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:59fbb9743e934af1227bf95ae0c2eac409cac40ff2a0f2dc350462a11a0b5e82",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "durable-contract",
+      "expected_artifact": "README.md fixture stays available while durable promotion succeeds",
+      "expected_artifact_exists": true,
+      "failure_category": "verifier_failed",
+      "final_answer": "No stable benchmark facts were provided in the request or available in memory, so there is nothing to promote.",
+      "fixture_copy_relpath": "durable_promotion_accept\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "durable_promotion_accept",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": false,
+      "prompt": "Capture the stable benchmark facts as durable memory and respond with only the promoted facts.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_153138f6",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "No stable benchmark facts were provided in the request or available in memory, so there is nothing to promote.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 896,
+          "current_request": {
+            "raw_chars": 94,
+            "rendered_chars": 94,
+            "section_chars": 116,
+            "text": "Capture the stable benchmark facts as durable memory and respond with only the promoted facts."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 113,
+            "rendered_chars": 113,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 101,
+          "input_tokens": 248,
+          "memory_chars": 188,
+          "output_tokens": 26,
+          "prefix_changed": true,
+          "prefix_chars": 5605,
+          "prefix_hash": "f6647f320ab6cf7497a697f738a9f5b72eb69b8161d9f3cd04ba92d53330706b",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "f6647f320ab6cf7497a697f738a9f5b72eb69b8161d9f3cd04ba92d53330706b",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4048,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 94,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 116,
+              "rendered_chars": 116
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 113,
+              "rendered_chars": 113
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 188,
+              "rendered_chars": 188
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5605,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 274,
+          "workspace_changed": true,
+          "workspace_chars": 3585,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "c722514e4f915db807f435f4221e5df3b2cdd055a9cf2e4e5dee8c966bfc18db"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102724-064390",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102724-556b1f",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_153138f6",
+          "final_answer": "No stable benchmark facts were provided in the request or available in memory, so there is nothing to promote.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102724-064390",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102724-556b1f",
+          "tool_steps": 0,
+          "user_request": "Capture the stable benchmark facts as durable memory and respond with only the promoted facts."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "durable_promotion_accept\\bench_repo_readme\\.pico\\runs\\run_20261005-102724-064390\\report.json",
+      "run_dir_relpath": "durable_promotion_accept\\bench_repo_readme\\.pico\\runs\\run_20261005-102724-064390",
+      "run_id": "run_20261005-102724-064390",
+      "status": "fail",
+      "step_budget": 2,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_153138f6",
+        "final_answer": "No stable benchmark facts were provided in the request or available in memory, so there is nothing to promote.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102724-064390",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102724-556b1f",
+        "tool_steps": 0,
+        "user_request": "Capture the stable benchmark facts as durable memory and respond with only the promoted facts."
+      },
+      "task_state_relpath": "durable_promotion_accept\\bench_repo_readme\\.pico\\runs\\run_20261005-102724-064390\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); conventions = Path('.pico/memory/topics/project-conventions.md').read_text(encoding='utf-8'); assert len(report['durable_promotions']) == 2; assert 'Preserve benchmark regression artifacts under artifacts/.' in conventions\"",
+      "verifier_exit_code": 1,
+      "verifier_passed": false,
+      "verifier_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); conventions = Path('.pico/memory/topics/project-conventions.md').read_text(encoding='utf-8'); assert len(report['durable_promotions']) == 2; assert 'Preserve benchmark regression artifacts under artifacts/.' in conventions\n                                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"D:\\Dev\\miniconda3\\Lib\\pathlib\\_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Dev\\miniconda3\\Lib\\pathlib\\_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Dev\\miniconda3\\Lib\\pathlib\\_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '.pico\\\\memory\\\\topics\\\\project-conventions.md'\n",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:59fbb9743e934af1227bf95ae0c2eac409cac40ff2a0f2dc350462a11a0b5e82",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "durable-contract",
+      "expected_artifact": "README.md fixture stays available while durable rejection is recorded",
+      "expected_artifact_exists": true,
+      "failure_category": "verifier_failed",
+      "final_answer": "I can\u2019t capture durable memory from the current context because no stable benchmark facts were provided in the transcript or workspace memory. The only available content is transient session/status data and paths, which should be rejected rather than stored.\n\nPlease provide the benchmark facts you want persisted (e.g., benchmark name, task definition, scoring rule, expected behavior, stable constraints), and I\u2019ll store only those while excluding transient state and secret-shaped values.",
+      "fixture_copy_relpath": "durable_promotion_reject\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "durable_promotion_reject",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": false,
+      "prompt": "Capture only the stable benchmark facts into durable memory and reject anything transient or secret-shaped.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_6db4f548",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "I can\u2019t capture durable memory from the current context because no stable benchmark facts were provided in the transcript or workspace memory. The only available content is transient session/status data and paths, which should be rejected rather than stored.\n\nPlease provide the benchmark facts you want persisted (e.g., benchmark name, task definition, scoring rule, expected behavior, stable constraints), and I\u2019ll store only those while excluding transient state and secret-shaped values.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 896,
+          "current_request": {
+            "raw_chars": 107,
+            "rendered_chars": 107,
+            "section_chars": 129,
+            "text": "Capture only the stable benchmark facts into durable memory and reject anything transient or secret-shaped."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 126,
+            "rendered_chars": 126,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 114,
+          "input_tokens": 251,
+          "memory_chars": 201,
+          "output_tokens": 94,
+          "prefix_changed": true,
+          "prefix_chars": 5605,
+          "prefix_hash": "77f16dbc484ee76f8c401f3e5e420e53908f7a611599fd4393998989a54aa469",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "77f16dbc484ee76f8c401f3e5e420e53908f7a611599fd4393998989a54aa469",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4087,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 107,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 129,
+              "rendered_chars": 129
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 126,
+              "rendered_chars": 126
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 201,
+              "rendered_chars": 201
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5605,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 345,
+          "workspace_changed": true,
+          "workspace_chars": 3585,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "6108782855f8d9ffe9975acf2d4cfcdba6a6425bafb86a0e4c33885977fb4eeb"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102726-7eac30",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102726-658da5",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_6db4f548",
+          "final_answer": "I can\u2019t capture durable memory from the current context because no stable benchmark facts were provided in the transcript or workspace memory. The only available content is transient session/status data and paths, which should be rejected rather than stored.\n\nPlease provide the benchmark facts you want persisted (e.g., benchmark name, task definition, scoring rule, expected behavior, stable constraints), and I\u2019ll store only those while excluding transient state and secret-shaped values.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102726-7eac30",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102726-658da5",
+          "tool_steps": 0,
+          "user_request": "Capture only the stable benchmark facts into durable memory and reject anything transient or secret-shaped."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "durable_promotion_reject\\bench_repo_readme\\.pico\\runs\\run_20261005-102726-7eac30\\report.json",
+      "run_dir_relpath": "durable_promotion_reject\\bench_repo_readme\\.pico\\runs\\run_20261005-102726-7eac30",
+      "run_id": "run_20261005-102726-7eac30",
+      "status": "fail",
+      "step_budget": 2,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_6db4f548",
+        "final_answer": "I can\u2019t capture durable memory from the current context because no stable benchmark facts were provided in the transcript or workspace memory. The only available content is transient session/status data and paths, which should be rejected rather than stored.\n\nPlease provide the benchmark facts you want persisted (e.g., benchmark name, task definition, scoring rule, expected behavior, stable constraints), and I\u2019ll store only those while excluding transient state and secret-shaped values.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102726-7eac30",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102726-658da5",
+        "tool_steps": 0,
+        "user_request": "Capture only the stable benchmark facts into durable memory and reject anything transient or secret-shaped."
+      },
+      "task_state_relpath": "durable_promotion_reject\\bench_repo_readme\\.pico\\runs\\run_20261005-102726-7eac30\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); assert report['durable_rejections'] == ['dependency-facts:secret_shaped', 'key-decisions:transient_task_state']; assert report['durable_promotions'] == ['project-conventions: Keep verifier outcomes stable across reruns.']\"",
+      "verifier_exit_code": 1,
+      "verifier_passed": false,
+      "verifier_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); assert report['durable_rejections'] == ['dependency-facts:secret_shaped', 'key-decisions:transient_task_state']; assert report['durable_promotions'] == ['project-conventions: Keep verifier outcomes stable across reruns.']\n                                                                                                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 2,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the Chinese-path decoding regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "The first line of README.md is: `# Bench Repo Platform`",
+      "fixture_copy_relpath": "platform_chinese_path_utf8\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_chinese_path_utf8",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and report its first line, then finish.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_5f617565",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "The first line of README.md is: `# Bench Repo Platform`",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1024,
+          "current_request": {
+            "raw_chars": 71,
+            "rendered_chars": 71,
+            "section_chars": 93,
+            "text": "Read README.md in the workspace and report its first line, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 276,
+            "rendered_chars": 276,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 264,
+          "input_tokens": 316,
+          "memory_chars": 271,
+          "output_tokens": 21,
+          "prefix_changed": false,
+          "prefix_chars": 5702,
+          "prefix_hash": "f17b4b5792aeadc955254a24ce623c12a4d35e5992b25f87317c7101fe1423ec",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "f17b4b5792aeadc955254a24ce623c12a4d35e5992b25f87317c7101fe1423ec",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4680,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 103,
+            "rendered_chars": 103,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_sources": [
+              "README.md"
+            ]
+          },
+          "request_chars": 71,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 327,
+              "rendered_chars": 327
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 93,
+              "rendered_chars": 93
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 276,
+              "rendered_chars": 276
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 271,
+              "rendered_chars": 271
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5702,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 103,
+              "rendered_chars": 103
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 337,
+          "workspace_changed": false,
+          "workspace_chars": 3682,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "769dffa9d8aa951f7d53cdfaf906e16a1cc7776cf71c4767dc0f0ab6571fb484"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102728-70ba6e",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102728-f13a77",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_5f617565",
+          "final_answer": "The first line of README.md is: `# Bench Repo Platform`",
+          "last_tool": "read_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102728-70ba6e",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102728-f13a77",
+          "tool_steps": 1,
+          "user_request": "Read README.md in the workspace and report its first line, then finish."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "platform_chinese_path_utf8\\bench_repo_platform\\.pico\\runs\\run_20261005-102728-70ba6e\\report.json",
+      "run_dir_relpath": "platform_chinese_path_utf8\\bench_repo_platform\\.pico\\runs\\run_20261005-102728-70ba6e",
+      "run_id": "run_20261005-102728-70ba6e",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_5f617565",
+        "final_answer": "The first line of README.md is: `# Bench Repo Platform`",
+        "last_tool": "read_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102728-70ba6e",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102728-f13a77",
+        "tool_steps": 1,
+        "user_request": "Read README.md in the workspace and report its first line, then finish."
+      },
+      "task_state_relpath": "platform_chinese_path_utf8\\bench_repo_platform\\.pico\\runs\\run_20261005-102728-70ba6e\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.3333333333333333,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_01_chinese_path.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 01 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 2,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the environment anchoring regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "README.md contains:\n\n```\n# Bench Repo Platform\n\nThis fixture backs the platform regression tasks.\n\n## Notes\n\n- Each platform regression runs one harness-level check against real code.\n- Verifier scripts live next to this file and run with the fixture copy as cwd.\n```\n\nThe only file name visible from the README content is `README.md` itself. The README mentions verifier scripts living next to it, but does not list their names.",
+      "fixture_copy_relpath": "platform_subdir_env_anchor\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_subdir_env_anchor",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and list the file names you can see, then finish.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_aec5bbe1",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "README.md contains:\n\n```\n# Bench Repo Platform\n\nThis fixture backs the platform regression tasks.\n\n## Notes\n\n- Each platform regression runs one harness-level check against real code.\n- Verifier scripts live next to this file and run with the fixture copy as cwd.\n```\n\nThe only file name visible from the README content is `README.md` itself. The README mentions verifier scripts living next to it, but does not list their names.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1024,
+          "current_request": {
+            "raw_chars": 81,
+            "rendered_chars": 81,
+            "section_chars": 103,
+            "text": "Read README.md in the workspace and list the file names you can see, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 462,
+            "rendered_chars": 462,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 450,
+          "input_tokens": 372,
+          "memory_chars": 281,
+          "output_tokens": 96,
+          "prefix_changed": false,
+          "prefix_chars": 5702,
+          "prefix_hash": "9346b1a6a80dc35369968f8b6aa045b67f8c57bd608190a01b15df775f1644e4",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "9346b1a6a80dc35369968f8b6aa045b67f8c57bd608190a01b15df775f1644e4",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4906,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 103,
+            "rendered_chars": 103,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_sources": [
+              "README.md"
+            ]
+          },
+          "request_chars": 81,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 347,
+              "rendered_chars": 347
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 103,
+              "rendered_chars": 103
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 462,
+              "rendered_chars": 462
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 281,
+              "rendered_chars": 281
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5702,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 103,
+              "rendered_chars": 103
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 468,
+          "workspace_changed": false,
+          "workspace_chars": 3682,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "f00505452caa15d3deb0332be097d7160d985f7abb759fc27eb8138b18a07076"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102731-5090e9",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102731-77870e",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_aec5bbe1",
+          "final_answer": "README.md contains:\n\n```\n# Bench Repo Platform\n\nThis fixture backs the platform regression tasks.\n\n## Notes\n\n- Each platform regression runs one harness-level check against real code.\n- Verifier scripts live next to this file and run with the fixture copy as cwd.\n```\n\nThe only file name visible from the README content is `README.md` itself. The README mentions verifier scripts living next to it, but does not list their names.",
+          "last_tool": "read_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102731-5090e9",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102731-77870e",
+          "tool_steps": 1,
+          "user_request": "Read README.md in the workspace and list the file names you can see, then finish."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "platform_subdir_env_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102731-5090e9\\report.json",
+      "run_dir_relpath": "platform_subdir_env_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102731-5090e9",
+      "run_id": "run_20261005-102731-5090e9",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_aec5bbe1",
+        "final_answer": "README.md contains:\n\n```\n# Bench Repo Platform\n\nThis fixture backs the platform regression tasks.\n\n## Notes\n\n- Each platform regression runs one harness-level check against real code.\n- Verifier scripts live next to this file and run with the fixture copy as cwd.\n```\n\nThe only file name visible from the README content is `README.md` itself. The README mentions verifier scripts living next to it, but does not list their names.",
+        "last_tool": "read_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102731-5090e9",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102731-77870e",
+        "tool_steps": 1,
+        "user_request": "Read README.md in the workspace and list the file names you can see, then finish."
+      },
+      "task_state_relpath": "platform_subdir_env_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102731-5090e9\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.3333333333333333,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_02_subdir_env.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 02 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "write_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 2,
+      "category": "platform-regression",
+      "expected_artifact": "hello.py exists with the requested content after the DSML tool call is parsed",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Created hello.py with `print(\"hello word\")`.",
+      "fixture_copy_relpath": "platform_dsml_tool_call\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_dsml_tool_call",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Create hello.py containing print(\"hello word\") in the workspace, then finish.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_31e75a54",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Created hello.py with `print(\"hello word\")`.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1024,
+          "current_request": {
+            "raw_chars": 77,
+            "rendered_chars": 77,
+            "section_chars": 99,
+            "text": "Create hello.py containing print(\"hello word\") in the workspace, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 199,
+            "rendered_chars": 199,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 187,
+          "input_tokens": 225,
+          "memory_chars": 178,
+          "output_tokens": 17,
+          "prefix_changed": false,
+          "prefix_chars": 5773,
+          "prefix_hash": "291623d65bd2152dcb990d623d477e25284bfb0aca61bf35f82b8000b692155c",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "291623d65bd2152dcb990d623d477e25284bfb0aca61bf35f82b8000b692155c",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4448,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 77,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 339,
+              "rendered_chars": 339
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 99,
+              "rendered_chars": 99
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 199,
+              "rendered_chars": 199
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 178,
+              "rendered_chars": 178
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5773,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 2,
+          "tool_signature": "508c52e985a48f5d83114a73073df865a2a4367f0f413b6899dd06f74fd3ebaf",
+          "total_tokens": 242,
+          "workspace_changed": false,
+          "workspace_chars": 3676,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "59faa1112267669776528231879dd01854fde5a0fa19717b1e491b1be33a70bf"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102734-7d6644",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102734-9905db",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_31e75a54",
+          "final_answer": "Created hello.py with `print(\"hello word\")`.",
+          "last_tool": "write_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102734-7d6644",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102734-9905db",
+          "tool_steps": 1,
+          "user_request": "Create hello.py containing print(\"hello word\") in the workspace, then finish."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "platform_dsml_tool_call\\bench_repo_platform\\.pico\\runs\\run_20261005-102734-7d6644\\report.json",
+      "run_dir_relpath": "platform_dsml_tool_call\\bench_repo_platform\\.pico\\runs\\run_20261005-102734-7d6644",
+      "run_id": "run_20261005-102734-7d6644",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_31e75a54",
+        "final_answer": "Created hello.py with `print(\"hello word\")`.",
+        "last_tool": "write_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102734-7d6644",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102734-9905db",
+        "tool_steps": 1,
+        "user_request": "Create hello.py containing print(\"hello word\") in the workspace, then finish."
+      },
+      "task_state_relpath": "platform_dsml_tool_call\\bench_repo_platform\\.pico\\runs\\run_20261005-102734-7d6644\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.3333333333333333,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_03_dsml_tool.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 03 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 2,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the thinking budget guard regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "The title of README.md is **Bench Repo Platform**.",
+      "fixture_copy_relpath": "platform_thinking_budget_guard\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_thinking_budget_guard",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and report its title, then finish.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_778af7fe",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "The title of README.md is **Bench Repo Platform**.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1024,
+          "current_request": {
+            "raw_chars": 66,
+            "rendered_chars": 66,
+            "section_chars": 88,
+            "text": "Read README.md in the workspace and report its title, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 446,
+            "rendered_chars": 446,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 434,
+          "input_tokens": 351,
+          "memory_chars": 266,
+          "output_tokens": 18,
+          "prefix_changed": false,
+          "prefix_chars": 5710,
+          "prefix_hash": "eb28134eaea5cfbae0e6f078eace7295649f1fdf21013bdb698ca61f4dcf028a",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "eb28134eaea5cfbae0e6f078eace7295649f1fdf21013bdb698ca61f4dcf028a",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4830,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 103,
+            "rendered_chars": 103,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_sources": [
+              "README.md"
+            ]
+          },
+          "request_chars": 66,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 317,
+              "rendered_chars": 317
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 88,
+              "rendered_chars": 88
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 446,
+              "rendered_chars": 446
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 266,
+              "rendered_chars": 266
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5710,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 103,
+              "rendered_chars": 103
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 369,
+          "workspace_changed": false,
+          "workspace_chars": 3690,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "d42e9482d4ee688326f594d65cb98792e850875247d868bb1949be1f288b5202"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102737-0b2594",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102737-7129f9",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_778af7fe",
+          "final_answer": "The title of README.md is **Bench Repo Platform**.",
+          "last_tool": "read_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102737-0b2594",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102737-7129f9",
+          "tool_steps": 1,
+          "user_request": "Read README.md in the workspace and report its title, then finish."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "platform_thinking_budget_guard\\bench_repo_platform\\.pico\\runs\\run_20261005-102737-0b2594\\report.json",
+      "run_dir_relpath": "platform_thinking_budget_guard\\bench_repo_platform\\.pico\\runs\\run_20261005-102737-0b2594",
+      "run_id": "run_20261005-102737-0b2594",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_778af7fe",
+        "final_answer": "The title of README.md is **Bench Repo Platform**.",
+        "last_tool": "read_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102737-0b2594",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102737-7129f9",
+        "tool_steps": 1,
+        "user_request": "Read README.md in the workspace and report its title, then finish."
+      },
+      "task_state_relpath": "platform_thinking_budget_guard\\bench_repo_platform\\.pico\\runs\\run_20261005-102737-0b2594\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.3333333333333333,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_04_thinking_budget.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 04 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 2,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the atomic write retry regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "README.md has 8 lines.",
+      "fixture_copy_relpath": "platform_atomic_write_retry\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_atomic_write_retry",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and report how many lines it has, then finish.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_39166a6a",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "README.md has 8 lines.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1024,
+          "current_request": {
+            "raw_chars": 78,
+            "rendered_chars": 78,
+            "section_chars": 100,
+            "text": "Read README.md in the workspace and report how many lines it has, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 459,
+            "rendered_chars": 459,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 447,
+          "input_tokens": 367,
+          "memory_chars": 278,
+          "output_tokens": 12,
+          "prefix_changed": false,
+          "prefix_chars": 5704,
+          "prefix_hash": "c330bb7f0f2174431ca6db4c86b8ca7b0d740d50d4171a4a2f9ac8725b5e325d",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "c330bb7f0f2174431ca6db4c86b8ca7b0d740d50d4171a4a2f9ac8725b5e325d",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4891,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 103,
+            "rendered_chars": 103,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_sources": [
+              "README.md"
+            ]
+          },
+          "request_chars": 78,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 341,
+              "rendered_chars": 341
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 100,
+              "rendered_chars": 100
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 459,
+              "rendered_chars": 459
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 278,
+              "rendered_chars": 278
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5704,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 103,
+              "rendered_chars": 103
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 379,
+          "workspace_changed": false,
+          "workspace_chars": 3684,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "c78f65038adf4e6fbbe782a7d2df1500c0c139f5f0cdede9055250eee06771fe"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102740-86aa35",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102740-7eb36e",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_39166a6a",
+          "final_answer": "README.md has 8 lines.",
+          "last_tool": "read_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102740-86aa35",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102740-7eb36e",
+          "tool_steps": 1,
+          "user_request": "Read README.md in the workspace and report how many lines it has, then finish."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "platform_atomic_write_retry\\bench_repo_platform\\.pico\\runs\\run_20261005-102740-86aa35\\report.json",
+      "run_dir_relpath": "platform_atomic_write_retry\\bench_repo_platform\\.pico\\runs\\run_20261005-102740-86aa35",
+      "run_id": "run_20261005-102740-86aa35",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_39166a6a",
+        "final_answer": "README.md has 8 lines.",
+        "last_tool": "read_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102740-86aa35",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102740-7eb36e",
+        "tool_steps": 1,
+        "user_request": "Read README.md in the workspace and report how many lines it has, then finish."
+      },
+      "task_state_relpath": "platform_atomic_write_retry\\bench_repo_platform\\.pico\\runs\\run_20261005-102740-86aa35\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.3333333333333333,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_05_atomic_write.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 05 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 2,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the workspace root anchoring regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "The README.md notes section says:\n\n- Each platform regression runs one harness-level check against real code.\n- Verifier scripts live next to this file and run with the fixture copy as cwd.",
+      "fixture_copy_relpath": "platform_metrics_repo_root_anchor\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_metrics_repo_root_anchor",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and summarise its notes section, then finish.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_428d84b3",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "The README.md notes section says:\n\n- Each platform regression runs one harness-level check against real code.\n- Verifier scripts live next to this file and run with the fixture copy as cwd.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "cache_creation_tokens": 0,
+          "cache_hit": true,
+          "cache_read_tokens": 1024,
+          "current_request": {
+            "raw_chars": 77,
+            "rendered_chars": 77,
+            "section_chars": 99,
+            "text": "Read README.md in the workspace and summarise its notes section, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 458,
+            "rendered_chars": 458,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 446,
+          "input_tokens": 361,
+          "memory_chars": 277,
+          "output_tokens": 44,
+          "prefix_changed": false,
+          "prefix_chars": 5716,
+          "prefix_hash": "9d44e9fdbf8ee74de5aa8a80bac60c1dedf881938aeb84d34e95b003d5320f40",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "9d44e9fdbf8ee74de5aa8a80bac60c1dedf881938aeb84d34e95b003d5320f40",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4886,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 103,
+            "rendered_chars": 103,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: # Bench Repo Platform | 2: | 3: This fixture backs the platform regression tasks."
+            ],
+            "selected_sources": [
+              "README.md"
+            ]
+          },
+          "request_chars": 77,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 339,
+              "rendered_chars": 339
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 99,
+              "rendered_chars": 99
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 458,
+              "rendered_chars": 458
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 277,
+              "rendered_chars": 277
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5716,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 103,
+              "rendered_chars": 103
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "stop_reason": "end_turn",
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "total_tokens": 405,
+          "workspace_changed": false,
+          "workspace_chars": 3696,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "8d71ed3239561bca7762238361390583a1702990afce8c59a71f819af215dd54"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102743-47df5e",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102743-553160",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_428d84b3",
+          "final_answer": "The README.md notes section says:\n\n- Each platform regression runs one harness-level check against real code.\n- Verifier scripts live next to this file and run with the fixture copy as cwd.",
+          "last_tool": "read_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102743-47df5e",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102743-553160",
+          "tool_steps": 1,
+          "user_request": "Read README.md in the workspace and summarise its notes section, then finish."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "platform_metrics_repo_root_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102743-47df5e\\report.json",
+      "run_dir_relpath": "platform_metrics_repo_root_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102743-47df5e",
+      "run_id": "run_20261005-102743-47df5e",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_428d84b3",
+        "final_answer": "The README.md notes section says:\n\n- Each platform regression runs one harness-level check against real code.\n- Verifier scripts live next to this file and run with the fixture copy as cwd.",
+        "last_tool": "read_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102743-47df5e",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102743-553160",
+        "tool_steps": 1,
+        "user_request": "Read README.md in the workspace and summarise its notes section, then finish."
+      },
+      "task_state_relpath": "platform_metrics_repo_root_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102743-47df5e\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.3333333333333333,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_06_repo_root_anchor.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 06 ok\n",
+      "within_budget": true
+    }
+  ],
+  "runtime": {
+    "branch": "main",
+    "commit_sha": "95cb3e56e9767854d22fb79af4330d08ae7c675f"
+  },
+  "schema_version": 1,
+  "summary": {
+    "failed": 9,
+    "failure_category_counts": {
+      "failure_stop_reason": 1,
+      "verifier_failed": 8
+    },
+    "pass_rate": 0.5,
+    "passed": 9,
+    "total_tasks": 18,
+    "trajectory": {
+      "avg_invalid_tool_calls": 0.3888888888888889,
+      "avg_loop_depth": 2.5,
+      "avg_loop_depth_ratio": 0.6287037037037037,
+      "avg_retry_count": 0.05555555555555555,
+      "avg_tool_selection_accuracy": 0.8333333333333334,
+      "tool_selection_accuracy_runs": 16,
+      "total_invalid_tool_calls": 7
+    },
+    "verifier_pass_rate": 0.5555555555555556,
+    "verifier_passes": 10,
+    "within_budget": 18,
+    "within_budget_rate": 1.0
+  }
+}

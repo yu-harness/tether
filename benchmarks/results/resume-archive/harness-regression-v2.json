@@ -1,0 +1,3878 @@
+{
+  "benchmark": {
+    "source": "benchmarks\\coding_tasks.local.json",
+    "task_count": 18
+  },
+  "captured_at": "2026-10-05T10:26:51+0800",
+  "failure_category_counts": {},
+  "reproducibility": {
+    "decoding": {
+      "max_new_tokens": 64,
+      "temperature": 0.0,
+      "top_p": 1.0
+    },
+    "fixture_snapshot_id": "sha256:c330e751622a276dacd4b3b2ebcfa98874259bb6d64008aff24dedc70b135de0",
+    "locale": "Chinese (Simplified)_China.936",
+    "model_name": "FakeModelClient",
+    "model_version": "scripted-deterministic",
+    "timezone": "Asia/Shanghai"
+  },
+  "rows": [
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:63196856afcd459cad75f233faca8bc2d9c0db0e31281afd7e100ccb852118e4",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 2,
+      "category": "documentation",
+      "expected_artifact": "README.md opening sentence is locked benchmark workspace text",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "readme_intro_locked\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "readme_intro_locked",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "In the README fixture, replace the placeholder opening sentence with 'This fixture is a locked benchmark workspace.'",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_0de4fcf1",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 116,
+            "rendered_chars": 116,
+            "section_chars": 138,
+            "text": "In the README fixture, replace the placeholder opening sentence with 'This fixture is a locked benchmark workspace.'"
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 310,
+            "rendered_chars": 310,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 298,
+          "memory_chars": 218,
+          "prefix_changed": true,
+          "prefix_chars": 5740,
+          "prefix_hash": "0e2cf2037441488377b052a06b9a8971ef5d810cd8fc5bab1d486edddd87e396",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "0e2cf2037441488377b052a06b9a8971ef5d810cd8fc5bab1d486edddd87e396",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4699,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 116,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 426,
+              "rendered_chars": 400
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 138,
+              "rendered_chars": 138
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 310,
+              "rendered_chars": 310
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 218,
+              "rendered_chars": 218
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5740,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "workspace_changed": true,
+          "workspace_chars": 3606,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "fea8a23f622369b0e9e28d7ae1c0d8f557e59f7f68d9c87b42d2dc904db5d4c7"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102635-788f2e",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102635-cea8ac",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_0de4fcf1",
+          "final_answer": "Done.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102635-788f2e",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102635-cea8ac",
+          "tool_steps": 1,
+          "user_request": "In the README fixture, replace the placeholder opening sentence with 'This fixture is a locked benchmark workspace.'"
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "readme_intro_locked\\bench_repo_readme\\.pico\\runs\\run_20261005-102635-788f2e\\report.json",
+      "run_dir_relpath": "readme_intro_locked\\bench_repo_readme\\.pico\\runs\\run_20261005-102635-788f2e",
+      "run_id": "run_20261005-102635-788f2e",
+      "status": "pass",
+      "step_budget": 4,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_0de4fcf1",
+        "final_answer": "Done.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102635-788f2e",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102635-cea8ac",
+        "tool_steps": 1,
+        "user_request": "In the README fixture, replace the placeholder opening sentence with 'This fixture is a locked benchmark workspace.'"
+      },
+      "task_state_relpath": "readme_intro_locked\\bench_repo_readme\\.pico\\runs\\run_20261005-102635-788f2e\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('README.md').read_text(encoding='utf-8'); assert 'This fixture is a locked benchmark workspace.' in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:9ea54cc1a8d2de44613463df1f5d6a12068079a70c1e0b7ce94f1968b5be88a6",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 2,
+      "category": "documentation",
+      "expected_artifact": "README.md contains the schema and baseline note",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "readme_schema_note\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "readme_schema_note",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Replace the first README bullet with a sentence that says the benchmark schema and baseline are fixed.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_8613429d",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 102,
+            "rendered_chars": 102,
+            "section_chars": 124,
+            "text": "Replace the first README bullet with a sentence that says the benchmark schema and baseline are fixed."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 291,
+            "rendered_chars": 291,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 279,
+          "memory_chars": 204,
+          "prefix_changed": true,
+          "prefix_chars": 5745,
+          "prefix_hash": "3fe8d04ac5ba7c146e2bab059fe67f7c9eeceb9ac145259196733b1359cf9127",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "3fe8d04ac5ba7c146e2bab059fe67f7c9eeceb9ac145259196733b1359cf9127",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4650,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 102,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 398,
+              "rendered_chars": 398
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 124,
+              "rendered_chars": 124
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 291,
+              "rendered_chars": 291
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 204,
+              "rendered_chars": 204
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5745,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "workspace_changed": true,
+          "workspace_chars": 3611,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "bf99458884ac6fd47ce8d98c7d3704b53a12bca7ffffa2af744141f3227495e1"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102636-1d5e99",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102636-38102a",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_8613429d",
+          "final_answer": "Done.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102636-1d5e99",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102636-38102a",
+          "tool_steps": 1,
+          "user_request": "Replace the first README bullet with a sentence that says the benchmark schema and baseline are fixed."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "readme_schema_note\\bench_repo_readme\\.pico\\runs\\run_20261005-102636-1d5e99\\report.json",
+      "run_dir_relpath": "readme_schema_note\\bench_repo_readme\\.pico\\runs\\run_20261005-102636-1d5e99",
+      "run_id": "run_20261005-102636-1d5e99",
+      "status": "pass",
+      "step_budget": 4,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_8613429d",
+        "final_answer": "Done.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102636-1d5e99",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102636-38102a",
+        "tool_steps": 1,
+        "user_request": "Replace the first README bullet with a sentence that says the benchmark schema and baseline are fixed."
+      },
+      "task_state_relpath": "readme_schema_note\\bench_repo_readme\\.pico\\runs\\run_20261005-102636-1d5e99\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('README.md').read_text(encoding='utf-8'); assert 'schema and baseline are fixed' in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:e8d7526c3da15e9570bc6db4f097e672ef50b1c19e82de5b4c074d9e87362e2e",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 2,
+      "category": "text-edit",
+      "expected_artifact": "sample.txt contains beta-locked",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "sample_beta_locked\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "sample_beta_locked",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "In sample.txt, replace beta with beta-locked.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_5a48b512",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 45,
+            "rendered_chars": 45,
+            "section_chars": 67,
+            "text": "In sample.txt, replace beta with beta-locked."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 171,
+            "rendered_chars": 171,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 159,
+          "memory_chars": 148,
+          "prefix_changed": true,
+          "prefix_chars": 5475,
+          "prefix_hash": "72129f8d87bc7051521fcfa92bc692f38aacc6afb0c5e9ebb8560c1c8c6d8080",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "72129f8d87bc7051521fcfa92bc692f38aacc6afb0c5e9ebb8560c1c8c6d8080",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4304,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 45,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 285,
+              "rendered_chars": 285
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 67,
+              "rendered_chars": 67
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 171,
+              "rendered_chars": 171
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 148,
+              "rendered_chars": 148
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5475,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "workspace_changed": true,
+          "workspace_chars": 3341,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "ec421482772910f40c70a2e7fb5fff4928beed83a5803cae27b2528eb47fa68b"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102636-a80f18",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102636-34cebf",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_5a48b512",
+          "final_answer": "Done.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102636-a80f18",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102636-34cebf",
+          "tool_steps": 1,
+          "user_request": "In sample.txt, replace beta with beta-locked."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "sample_beta_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102636-a80f18\\report.json",
+      "run_dir_relpath": "sample_beta_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102636-a80f18",
+      "run_id": "run_20261005-102636-a80f18",
+      "status": "pass",
+      "step_budget": 4,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_5a48b512",
+        "final_answer": "Done.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102636-a80f18",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102636-34cebf",
+        "tool_steps": 1,
+        "user_request": "In sample.txt, replace beta with beta-locked."
+      },
+      "task_state_relpath": "sample_beta_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102636-a80f18\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'beta-locked' in text and '\\nbeta\\n' not in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:3d30e7712c8f62c1a30f60f805195f645c7b9b49f8d64cfbe14c7c4a3eba9f90",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 2,
+      "category": "text-edit",
+      "expected_artifact": "sample.txt contains gamma-locked",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "sample_gamma_locked\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "sample_gamma_locked",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "In sample.txt, replace gamma with gamma-locked.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_4ea48404",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 47,
+            "rendered_chars": 47,
+            "section_chars": 69,
+            "text": "In sample.txt, replace gamma with gamma-locked."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 175,
+            "rendered_chars": 175,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 163,
+          "memory_chars": 150,
+          "prefix_changed": true,
+          "prefix_chars": 5476,
+          "prefix_hash": "58301137292882fe22a36c0df3ff30cad86a72f35fa62ca41099208361ae789b",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "58301137292882fe22a36c0df3ff30cad86a72f35fa62ca41099208361ae789b",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4316,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 47,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 289,
+              "rendered_chars": 289
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 69,
+              "rendered_chars": 69
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 175,
+              "rendered_chars": 175
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 150,
+              "rendered_chars": 150
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5476,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "workspace_changed": true,
+          "workspace_chars": 3342,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "8a51adfbcf70c1654371253ebaa80a0dc965213cbcde9c4e9542649750d10854"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102637-a913dd",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102637-9dcfff",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_4ea48404",
+          "final_answer": "Done.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102637-a913dd",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102637-9dcfff",
+          "tool_steps": 1,
+          "user_request": "In sample.txt, replace gamma with gamma-locked."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "sample_gamma_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102637-a913dd\\report.json",
+      "run_dir_relpath": "sample_gamma_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102637-a913dd",
+      "run_id": "run_20261005-102637-a913dd",
+      "status": "pass",
+      "step_budget": 4,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_4ea48404",
+        "final_answer": "Done.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102637-a913dd",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102637-9dcfff",
+        "tool_steps": 1,
+        "user_request": "In sample.txt, replace gamma with gamma-locked."
+      },
+      "task_state_relpath": "sample_gamma_locked\\bench_repo_patch\\.pico\\runs\\run_20261005-102637-a913dd\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'gamma-locked' in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "patch_file",
+        "read_file"
+      ],
+      "artifact_digest": "sha256:9ad729508c958838fc925fca0c84516ad52f0395c79998db89f750b248d757e8",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 3,
+      "category": "tool-boundary",
+      "expected_artifact": "README.md reflects recovery after invalid patch args",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "invalid_patch_recovery\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "invalid_patch_recovery",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Recover after invalid patch arguments and finish the README patch.",
+      "report": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_77fdafe3",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 66,
+            "rendered_chars": 66,
+            "section_chars": 88,
+            "text": "Recover after invalid patch arguments and finish the README patch."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 543,
+            "rendered_chars": 543,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 531,
+          "memory_chars": 168,
+          "prefix_changed": true,
+          "prefix_chars": 5749,
+          "prefix_hash": "4989d2a9d912f5f99bec3a8c68a3485e79af343efb04718112a1b053f2eb5094",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "4989d2a9d912f5f99bec3a8c68a3485e79af343efb04718112a1b053f2eb5094",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4758,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 66,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 326,
+              "rendered_chars": 326
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 88,
+              "rendered_chars": 88
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 543,
+              "rendered_chars": 543
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 168,
+              "rendered_chars": 168
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5749,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "workspace_changed": true,
+          "workspace_chars": 3615,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "b60cf63aeae3458dac99a7650035c9dfff54b0fcd43ad05010b30252cf7190b9"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102638-ba8673",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102638-13eacf",
+        "task_state": {
+          "attempts": 3,
+          "checkpoint_id": "ckpt_77fdafe3",
+          "final_answer": "Done.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102638-ba8673",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102638-13eacf",
+          "tool_steps": 2,
+          "user_request": "Recover after invalid patch arguments and finish the README patch."
+        },
+        "tool_steps": 2
+      },
+      "report_relpath": "invalid_patch_recovery\\bench_repo_readme\\.pico\\runs\\run_20261005-102638-ba8673\\report.json",
+      "run_dir_relpath": "invalid_patch_recovery\\bench_repo_readme\\.pico\\runs\\run_20261005-102638-ba8673",
+      "run_id": "run_20261005-102638-ba8673",
+      "status": "pass",
+      "step_budget": 5,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_77fdafe3",
+        "final_answer": "Done.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102638-ba8673",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102638-13eacf",
+        "tool_steps": 2,
+        "user_request": "Recover after invalid patch arguments and finish the README patch."
+      },
+      "task_state_relpath": "invalid_patch_recovery\\bench_repo_readme\\.pico\\runs\\run_20261005-102638-ba8673\\task_state.json",
+      "tool_steps": 2,
+      "trajectory": {
+        "invalid_tool_calls": 1,
+        "loop_depth": 3,
+        "loop_depth_ratio": 0.6,
+        "retry_count": 0,
+        "tool_calls": 2,
+        "tool_selection_accuracy": 0.5
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('README.md').read_text(encoding='utf-8'); assert 'recovered after invalid patch args' in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:f6562c2f0a1925bfba2888ff6d8e5ba0a60e6a3f58e9fcdf05f2cbd8d60926cd",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 3,
+      "category": "tool-boundary",
+      "expected_artifact": "sample.txt reflects recovery after path escape rejection",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "path_escape_recovery\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "path_escape_recovery",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Reject a path escape attempt and still finish the sample.txt patch.",
+      "report": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_00d6f314",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 67,
+            "rendered_chars": 67,
+            "section_chars": 89,
+            "text": "Reject a path escape attempt and still finish the sample.txt patch."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 431,
+            "rendered_chars": 431,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 419,
+          "memory_chars": 170,
+          "prefix_changed": true,
+          "prefix_chars": 5477,
+          "prefix_hash": "e4e1b3fe8d8cc777d856e445abcaf3c346cdb39ff97a0e18b68c2832dd8ab9bd",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "e4e1b3fe8d8cc777d856e445abcaf3c346cdb39ff97a0e18b68c2832dd8ab9bd",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4652,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 67,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 329,
+              "rendered_chars": 329
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 89,
+              "rendered_chars": 89
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 431,
+              "rendered_chars": 431
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 170,
+              "rendered_chars": 170
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5477,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "workspace_changed": true,
+          "workspace_chars": 3343,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "858c13820926266d25eec292ef589e105d0094d77cd3eb092cede6e2ffe5ca9e"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102639-07493b",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102639-2f818b",
+        "task_state": {
+          "attempts": 3,
+          "checkpoint_id": "ckpt_00d6f314",
+          "final_answer": "Done.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102639-07493b",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102639-2f818b",
+          "tool_steps": 2,
+          "user_request": "Reject a path escape attempt and still finish the sample.txt patch."
+        },
+        "tool_steps": 2
+      },
+      "report_relpath": "path_escape_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102639-07493b\\report.json",
+      "run_dir_relpath": "path_escape_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102639-07493b",
+      "run_id": "run_20261005-102639-07493b",
+      "status": "pass",
+      "step_budget": 5,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 3,
+        "checkpoint_id": "ckpt_00d6f314",
+        "final_answer": "Done.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102639-07493b",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102639-2f818b",
+        "tool_steps": 2,
+        "user_request": "Reject a path escape attempt and still finish the sample.txt patch."
+      },
+      "task_state_relpath": "path_escape_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102639-07493b\\task_state.json",
+      "tool_steps": 2,
+      "trajectory": {
+        "invalid_tool_calls": 1,
+        "loop_depth": 3,
+        "loop_depth_ratio": 0.6,
+        "retry_count": 0,
+        "tool_calls": 2,
+        "tool_selection_accuracy": 0.5
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'alpha-guarded' in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "patch_file"
+      ],
+      "artifact_digest": "sha256:8391278d2b6a228ffabc5c858a46f94a1ee2e0df64294879f996a785c2da5086",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 5,
+      "category": "tool-boundary",
+      "expected_artifact": "sample.txt reflects recovery after repeated identical read rejection",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "repeated_read_recovery\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "repeated_read_recovery",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Recover after repeated identical reads and still finish the sample.txt patch.",
+      "report": {
+        "attempts": 5,
+        "checkpoint_id": "ckpt_35407864",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 77,
+            "rendered_chars": 77,
+            "section_chars": 99,
+            "text": "Recover after repeated identical reads and still finish the sample.txt patch."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 631,
+            "rendered_chars": 631,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 619,
+          "memory_chars": 180,
+          "prefix_changed": true,
+          "prefix_chars": 5479,
+          "prefix_hash": "bfa1b6a6f0e56836466d0572947c73f96cefefd69cac6558ab61f1919d8e7a46",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "bfa1b6a6f0e56836466d0572947c73f96cefefd69cac6558ab61f1919d8e7a46",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4917,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 48,
+            "rendered_chars": 48,
+            "rendered_count": 1,
+            "rendered_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_count": 1,
+            "selected_durable_count": 0,
+            "selected_kinds": [
+              "episodic"
+            ],
+            "selected_notes": [
+              "1: alpha | 2: beta | 3: gamma"
+            ],
+            "selected_sources": [
+              "sample.txt"
+            ]
+          },
+          "request_chars": 77,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 349,
+              "rendered_chars": 349
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 99,
+              "rendered_chars": 99
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 631,
+              "rendered_chars": 631
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 180,
+              "rendered_chars": 180
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5479,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 48,
+              "rendered_chars": 48
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 2,
+          "tool_signature": "2ce2c35819cc1537d4556c1cef854b28598d76fa82e22499fd8c6ec0a037e111",
+          "workspace_changed": true,
+          "workspace_chars": 3345,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "bf5fa413e9a9cb881561f457e9ba1c6c6b60f7777c7a898160adeb41fd792761"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102640-06c714",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102640-f8e6ed",
+        "task_state": {
+          "attempts": 5,
+          "checkpoint_id": "ckpt_35407864",
+          "final_answer": "Done.",
+          "last_tool": "patch_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102640-06c714",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102640-f8e6ed",
+          "tool_steps": 4,
+          "user_request": "Recover after repeated identical reads and still finish the sample.txt patch."
+        },
+        "tool_steps": 4
+      },
+      "report_relpath": "repeated_read_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102640-06c714\\report.json",
+      "run_dir_relpath": "repeated_read_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102640-06c714",
+      "run_id": "run_20261005-102640-06c714",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 5,
+        "checkpoint_id": "ckpt_35407864",
+        "final_answer": "Done.",
+        "last_tool": "patch_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102640-06c714",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102640-f8e6ed",
+        "tool_steps": 4,
+        "user_request": "Recover after repeated identical reads and still finish the sample.txt patch."
+      },
+      "task_state_relpath": "repeated_read_recovery\\bench_repo_patch\\.pico\\runs\\run_20261005-102640-06c714\\task_state.json",
+      "tool_steps": 4,
+      "trajectory": {
+        "invalid_tool_calls": 1,
+        "loop_depth": 5,
+        "loop_depth_ratio": 0.8333333333333334,
+        "retry_count": 0,
+        "tool_calls": 4,
+        "tool_selection_accuracy": 0.75
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"from pathlib import Path; text = Path('sample.txt').read_text(encoding='utf-8'); assert 'repeat-guarded' in text\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:59fbb9743e934af1227bf95ae0c2eac409cac40ff2a0f2dc350462a11a0b5e82",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "recovery",
+      "expected_artifact": "README.md remains available while context reduction creates a checkpoint",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "context_reduction_checkpoint\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "context_reduction_checkpoint",
+      "initial_episodic_notes_empty": false,
+      "initial_history_empty": false,
+      "initial_memory_empty": false,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Finish the README update after prompt compression creates a checkpoint.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_a415a5c1",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [
+            {
+              "after_chars": 200,
+              "before_chars": 800,
+              "overflow_chars": 2227,
+              "section": "relevant_memory"
+            },
+            {
+              "after_chars": 600,
+              "before_chars": 2400,
+              "overflow_chars": 2227,
+              "section": "history"
+            },
+            {
+              "after_chars": 200,
+              "before_chars": 800,
+              "overflow_chars": 982,
+              "section": "memory"
+            },
+            {
+              "after_chars": 200,
+              "before_chars": 800,
+              "overflow_chars": 982,
+              "section": "prefix"
+            }
+          ],
+          "current_request": {
+            "raw_chars": 71,
+            "rendered_chars": 71,
+            "section_chars": 93,
+            "text": "Finish the README update after prompt compression creates a checkpoint."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 3098,
+            "rendered_chars": 593,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 3114,
+          "memory_chars": 165,
+          "prefix_changed": true,
+          "prefix_chars": 5639,
+          "prefix_hash": "3e3e9e20777cbd0dd0ab01eec76672984cf7c0906369b99c22a1cc4d3f1d0107",
+          "prompt_budget_chars": 700,
+          "prompt_cache_key": "3e3e9e20777cbd0dd0ab01eec76672984cf7c0906369b99c22a1cc4d3f1d0107",
+          "prompt_cache_supported": false,
+          "prompt_chars": 1082,
+          "prompt_over_budget": true,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 71,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 0,
+            "current_request": null,
+            "history": 600,
+            "memory": 200,
+            "prefix": 200,
+            "relevant_memory": 200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 0,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 93,
+              "rendered_chars": 93
+            },
+            "history": {
+              "budget_chars": 600,
+              "raw_chars": 3098,
+              "rendered_chars": 593
+            },
+            "memory": {
+              "budget_chars": 200,
+              "raw_chars": 165,
+              "rendered_chars": 165
+            },
+            "prefix": {
+              "budget_chars": 200,
+              "raw_chars": 5639,
+              "rendered_chars": 200
+            },
+            "relevant_memory": {
+              "budget_chars": 200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3619,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "52797ff83f947982b735b97869278f2d694437aeb1f297a914539c4e449a44d2"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102641-3a8706",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102641-a32672",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_a415a5c1",
+          "final_answer": "Done.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102641-3a8706",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102641-a32672",
+          "tool_steps": 0,
+          "user_request": "Finish the README update after prompt compression creates a checkpoint."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "context_reduction_checkpoint\\bench_repo_readme\\.pico\\runs\\run_20261005-102641-3a8706\\report.json",
+      "run_dir_relpath": "context_reduction_checkpoint\\bench_repo_readme\\.pico\\runs\\run_20261005-102641-3a8706",
+      "run_id": "run_20261005-102641-3a8706",
+      "status": "pass",
+      "step_budget": 2,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_a415a5c1",
+        "final_answer": "Done.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102641-3a8706",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102641-a32672",
+        "tool_steps": 0,
+        "user_request": "Finish the README update after prompt compression creates a checkpoint."
+      },
+      "task_state_relpath": "context_reduction_checkpoint\\bench_repo_readme\\.pico\\runs\\run_20261005-102641-3a8706\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); trace = [json.loads(line) for line in next(Path('.pico/runs').glob('*/trace.jsonl')).read_text(encoding='utf-8').splitlines()]; assert report['checkpoint_id']; assert any(event.get('event') == 'checkpoint_created' and event.get('trigger') == 'context_reduction' for event in trace)\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:4f02ab2cb053f7a45a59ded413b10fb22ffc9e09487b655573f8497bf141bad9",
+      "artifact_exists": true,
+      "artifact_path": "sample.txt",
+      "attempts": 1,
+      "category": "recovery",
+      "expected_artifact": "sample.txt exists after stale freshness recovery",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "freshness_reanchor_resume\\bench_repo_patch",
+      "fixture_repo": "tests/fixtures/bench_repo_patch",
+      "id": "freshness_reanchor_resume",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": false,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Resume the stale benchmark task and finish without trusting the old summary.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_14f0cb48",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 76,
+            "rendered_chars": 76,
+            "section_chars": 98,
+            "text": "Resume the stale benchmark task and finish without trusting the old summary."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 95,
+            "rendered_chars": 95,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 83,
+          "memory_chars": 179,
+          "prefix_changed": true,
+          "prefix_chars": 5368,
+          "prefix_hash": "4d72018c58bb88e5649bdbebee0c2c4e9dc7c666015cca5734b39656032fada7",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "4d72018c58bb88e5649bdbebee0c2c4e9dc7c666015cca5734b39656032fada7",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4246,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 76,
+          "resume_status": "partial-stale",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 241,
+              "rendered_chars": 241
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 98,
+              "rendered_chars": 98
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 95,
+              "rendered_chars": 95
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 179,
+              "rendered_chars": 179
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5368,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [
+            "sample.txt"
+          ],
+          "stale_summary_invalidations": 1,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3348,
+          "workspace_docs": 1,
+          "workspace_fingerprint": "ff6527619c0d894dfe40ce5ea366d9dfec611d651a34139cb61ef06d73eadd78"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102642-246040",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102642-1e81af",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_14f0cb48",
+          "final_answer": "Done.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102642-246040",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102642-1e81af",
+          "tool_steps": 0,
+          "user_request": "Resume the stale benchmark task and finish without trusting the old summary."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "freshness_reanchor_resume\\bench_repo_patch\\.pico\\runs\\run_20261005-102642-246040\\report.json",
+      "run_dir_relpath": "freshness_reanchor_resume\\bench_repo_patch\\.pico\\runs\\run_20261005-102642-246040",
+      "run_id": "run_20261005-102642-246040",
+      "status": "pass",
+      "step_budget": 3,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_14f0cb48",
+        "final_answer": "Done.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102642-246040",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102642-1e81af",
+        "tool_steps": 0,
+        "user_request": "Resume the stale benchmark task and finish without trusting the old summary."
+      },
+      "task_state_relpath": "freshness_reanchor_resume\\bench_repo_patch\\.pico\\runs\\run_20261005-102642-246040\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.3333333333333333,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); trace = [json.loads(line) for line in next(Path('.pico/runs').glob('*/trace.jsonl')).read_text(encoding='utf-8').splitlines()]; assert report['prompt_metadata']['resume_status'] == 'partial-stale'; assert any(event.get('event') == 'checkpoint_created' and event.get('trigger') == 'freshness_mismatch' for event in trace)\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:59fbb9743e934af1227bf95ae0c2eac409cac40ff2a0f2dc350462a11a0b5e82",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "recovery",
+      "expected_artifact": "README.md exists after workspace mismatch recovery",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "workspace_mismatch_resume\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "workspace_mismatch_resume",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Resume after benchmark workspace drift and rebuild runtime state.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_0943c390",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 65,
+            "rendered_chars": 65,
+            "section_chars": 87,
+            "text": "Resume after benchmark workspace drift and rebuild runtime state."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 84,
+            "rendered_chars": 84,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 72,
+          "memory_chars": 159,
+          "prefix_changed": true,
+          "prefix_chars": 5633,
+          "prefix_hash": "f89ed5275cf16205e958df3b9d2eef2fe110a33a359e1b44e1d8f1ace5a5c23d",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "f89ed5275cf16205e958df3b9d2eef2fe110a33a359e1b44e1d8f1ace5a5c23d",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4214,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 65,
+          "resume_status": "workspace-mismatch",
+          "runtime_identity_mismatch_fields": [
+            "workspace_fingerprint"
+          ],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 251,
+              "rendered_chars": 251
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 87,
+              "rendered_chars": 87
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 84,
+              "rendered_chars": 84
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 159,
+              "rendered_chars": 159
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5633,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3613,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "7a5cf1c3d64257d8faf8cc1f5fd4e55a0d11164c4a80b873b5c42b222aea58b9"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102643-c97213",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102643-35e6a9",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_0943c390",
+          "final_answer": "Done.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102643-c97213",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102643-35e6a9",
+          "tool_steps": 0,
+          "user_request": "Resume after benchmark workspace drift and rebuild runtime state."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "workspace_mismatch_resume\\bench_repo_readme\\.pico\\runs\\run_20261005-102643-c97213\\report.json",
+      "run_dir_relpath": "workspace_mismatch_resume\\bench_repo_readme\\.pico\\runs\\run_20261005-102643-c97213",
+      "run_id": "run_20261005-102643-c97213",
+      "status": "pass",
+      "step_budget": 3,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_0943c390",
+        "final_answer": "Done.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102643-c97213",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102643-35e6a9",
+        "tool_steps": 0,
+        "user_request": "Resume after benchmark workspace drift and rebuild runtime state."
+      },
+      "task_state_relpath": "workspace_mismatch_resume\\bench_repo_readme\\.pico\\runs\\run_20261005-102643-c97213\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.3333333333333333,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); trace = [json.loads(line) for line in next(Path('.pico/runs').glob('*/trace.jsonl')).read_text(encoding='utf-8').splitlines()]; assert report['prompt_metadata']['resume_status'] == 'workspace-mismatch'; assert any(event.get('event') == 'runtime_identity_mismatch' for event in trace)\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:59fbb9743e934af1227bf95ae0c2eac409cac40ff2a0f2dc350462a11a0b5e82",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "durable-contract",
+      "expected_artifact": "README.md fixture stays available while durable promotion succeeds",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Project convention: Preserve benchmark regression artifacts under artifacts/.\nDecision: Keep harness regression deterministic and reproducible.",
+      "fixture_copy_relpath": "durable_promotion_accept\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "durable_promotion_accept",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Capture the stable benchmark facts as durable memory and respond with only the promoted facts.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_cb0032c3",
+        "durable_promotions": [
+          "project-conventions: Preserve benchmark regression artifacts under artifacts/.",
+          "key-decisions: Keep harness regression deterministic and reproducible."
+        ],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Project convention: Preserve benchmark regression artifacts under artifacts/.\nDecision: Keep harness regression deterministic and reproducible.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 94,
+            "rendered_chars": 94,
+            "section_chars": 116,
+            "text": "Capture the stable benchmark facts as durable memory and respond with only the promoted facts."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 113,
+            "rendered_chars": 113,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 101,
+          "memory_chars": 188,
+          "prefix_changed": true,
+          "prefix_chars": 5631,
+          "prefix_hash": "42b1179c8fe3052f7e715df4c22e7e8c41b8f9ca0017fb52909a3a7b57a23ba8",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "42b1179c8fe3052f7e715df4c22e7e8c41b8f9ca0017fb52909a3a7b57a23ba8",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4048,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 94,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 116,
+              "rendered_chars": 116
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 113,
+              "rendered_chars": 113
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 188,
+              "rendered_chars": 188
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5631,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3611,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "7162ba7c8f8f3c3884fa606cb136b36473ce065b9c3c9c8d129c1bd8a1937a6b"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102643-ff6ee2",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102643-ad1d3c",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_cb0032c3",
+          "final_answer": "Project convention: Preserve benchmark regression artifacts under artifacts/.\nDecision: Keep harness regression deterministic and reproducible.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102643-ff6ee2",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102643-ad1d3c",
+          "tool_steps": 0,
+          "user_request": "Capture the stable benchmark facts as durable memory and respond with only the promoted facts."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "durable_promotion_accept\\bench_repo_readme\\.pico\\runs\\run_20261005-102643-ff6ee2\\report.json",
+      "run_dir_relpath": "durable_promotion_accept\\bench_repo_readme\\.pico\\runs\\run_20261005-102643-ff6ee2",
+      "run_id": "run_20261005-102643-ff6ee2",
+      "status": "pass",
+      "step_budget": 2,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_cb0032c3",
+        "final_answer": "Project convention: Preserve benchmark regression artifacts under artifacts/.\nDecision: Keep harness regression deterministic and reproducible.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102643-ff6ee2",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102643-ad1d3c",
+        "tool_steps": 0,
+        "user_request": "Capture the stable benchmark facts as durable memory and respond with only the promoted facts."
+      },
+      "task_state_relpath": "durable_promotion_accept\\bench_repo_readme\\.pico\\runs\\run_20261005-102643-ff6ee2\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); conventions = Path('.pico/memory/topics/project-conventions.md').read_text(encoding='utf-8'); assert len(report['durable_promotions']) == 2; assert 'Preserve benchmark regression artifacts under artifacts/.' in conventions\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:59fbb9743e934af1227bf95ae0c2eac409cac40ff2a0f2dc350462a11a0b5e82",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "durable-contract",
+      "expected_artifact": "README.md fixture stays available while durable rejection is recorded",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Project convention: Keep verifier outcomes stable across reruns.\nDependency: API key is sk-benchmark-secret.\nDecision: Current goal is debug the harness.",
+      "fixture_copy_relpath": "durable_promotion_reject\\bench_repo_readme",
+      "fixture_repo": "tests/fixtures/bench_repo_readme",
+      "id": "durable_promotion_reject",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Capture only the stable benchmark facts into durable memory and reject anything transient or secret-shaped.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_af36210d",
+        "durable_promotions": [
+          "project-conventions: Keep verifier outcomes stable across reruns."
+        ],
+        "durable_rejections": [
+          "dependency-facts:secret_shaped",
+          "key-decisions:transient_task_state"
+        ],
+        "durable_superseded": [],
+        "final_answer": "Project convention: Keep verifier outcomes stable across reruns.\nDependency: API key is sk-benchmark-secret.\nDecision: Current goal is debug the harness.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 107,
+            "rendered_chars": 107,
+            "section_chars": 129,
+            "text": "Capture only the stable benchmark facts into durable memory and reject anything transient or secret-shaped."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 126,
+            "rendered_chars": 126,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 114,
+          "memory_chars": 201,
+          "prefix_changed": true,
+          "prefix_chars": 5631,
+          "prefix_hash": "efcc74b3dbd5df34b7d4897fdd970f954a9afb275ce62f9ae3f180bdf7e28b4e",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "efcc74b3dbd5df34b7d4897fdd970f954a9afb275ce62f9ae3f180bdf7e28b4e",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4087,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 107,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 129,
+              "rendered_chars": 129
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 126,
+              "rendered_chars": 126
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 201,
+              "rendered_chars": 201
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5631,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3611,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "a611ffb039d65295f333d31c53fbf2692c7c60852d00a8e4ee0e8e5507475fc5"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102644-856199",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102644-656b4e",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_af36210d",
+          "final_answer": "Project convention: Keep verifier outcomes stable across reruns.\nDependency: API key is sk-benchmark-secret.\nDecision: Current goal is debug the harness.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102644-856199",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102644-656b4e",
+          "tool_steps": 0,
+          "user_request": "Capture only the stable benchmark facts into durable memory and reject anything transient or secret-shaped."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "durable_promotion_reject\\bench_repo_readme\\.pico\\runs\\run_20261005-102644-856199\\report.json",
+      "run_dir_relpath": "durable_promotion_reject\\bench_repo_readme\\.pico\\runs\\run_20261005-102644-856199",
+      "run_id": "run_20261005-102644-856199",
+      "status": "pass",
+      "step_budget": 2,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_af36210d",
+        "final_answer": "Project convention: Keep verifier outcomes stable across reruns.\nDependency: API key is sk-benchmark-secret.\nDecision: Current goal is debug the harness.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102644-856199",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102644-656b4e",
+        "tool_steps": 0,
+        "user_request": "Capture only the stable benchmark facts into durable memory and reject anything transient or secret-shaped."
+      },
+      "task_state_relpath": "durable_promotion_reject\\bench_repo_readme\\.pico\\runs\\run_20261005-102644-856199\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.5,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" -c \"import json; from pathlib import Path; report = json.loads(next(Path('.pico/runs').glob('*/report.json')).read_text(encoding='utf-8')); assert report['durable_rejections'] == ['dependency-facts:secret_shaped', 'key-decisions:transient_task_state']; assert report['durable_promotions'] == ['project-conventions: Keep verifier outcomes stable across reruns.']\"",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the Chinese-path decoding regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Platform regression 01 executed.",
+      "fixture_copy_relpath": "platform_chinese_path_utf8\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_chinese_path_utf8",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and report its first line, then finish.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_e1bcfdcf",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Platform regression 01 executed.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 71,
+            "rendered_chars": 71,
+            "section_chars": 93,
+            "text": "Read README.md in the workspace and report its first line, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 90,
+            "rendered_chars": 90,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 78,
+          "memory_chars": 165,
+          "prefix_changed": true,
+          "prefix_chars": 5728,
+          "prefix_hash": "3973498f781232cfd7bac611e6f53785ce62ee32b4a9f6d99f7d809dab91fd91",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "3973498f781232cfd7bac611e6f53785ce62ee32b4a9f6d99f7d809dab91fd91",
+          "prompt_cache_supported": false,
+          "prompt_chars": 3979,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 71,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 93,
+              "rendered_chars": 93
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 90,
+              "rendered_chars": 90
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 165,
+              "rendered_chars": 165
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5728,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3708,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "bd7c7eb83ce58c6c0a3df1e078877c567c252dc97e83196446e1282e9529f17d"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102645-5ecf01",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102645-ea2bec",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_e1bcfdcf",
+          "final_answer": "Platform regression 01 executed.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102645-5ecf01",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102645-ea2bec",
+          "tool_steps": 0,
+          "user_request": "Read README.md in the workspace and report its first line, then finish."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "platform_chinese_path_utf8\\bench_repo_platform\\.pico\\runs\\run_20261005-102645-5ecf01\\report.json",
+      "run_dir_relpath": "platform_chinese_path_utf8\\bench_repo_platform\\.pico\\runs\\run_20261005-102645-5ecf01",
+      "run_id": "run_20261005-102645-5ecf01",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_e1bcfdcf",
+        "final_answer": "Platform regression 01 executed.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102645-5ecf01",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102645-ea2bec",
+        "tool_steps": 0,
+        "user_request": "Read README.md in the workspace and report its first line, then finish."
+      },
+      "task_state_relpath": "platform_chinese_path_utf8\\bench_repo_platform\\.pico\\runs\\run_20261005-102645-5ecf01\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.16666666666666666,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_01_chinese_path.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 01 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the environment anchoring regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Platform regression 02 executed.",
+      "fixture_copy_relpath": "platform_subdir_env_anchor\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_subdir_env_anchor",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and list the file names you can see, then finish.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_462c8263",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Platform regression 02 executed.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 81,
+            "rendered_chars": 81,
+            "section_chars": 103,
+            "text": "Read README.md in the workspace and list the file names you can see, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 100,
+            "rendered_chars": 100,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 88,
+          "memory_chars": 175,
+          "prefix_changed": true,
+          "prefix_chars": 5728,
+          "prefix_hash": "54a21039435add86c80caf5ebc6997ff16513b60c40b78d15e8e36bf5144108c",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "54a21039435add86c80caf5ebc6997ff16513b60c40b78d15e8e36bf5144108c",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4009,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 81,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 103,
+              "rendered_chars": 103
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 100,
+              "rendered_chars": 100
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 175,
+              "rendered_chars": 175
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5728,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3708,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "df094167f4d9b3506547185635d9db0c37c076b188c8a1b635abe7c40d513cd7"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102646-e38da3",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102646-8d918b",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_462c8263",
+          "final_answer": "Platform regression 02 executed.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102646-e38da3",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102646-8d918b",
+          "tool_steps": 0,
+          "user_request": "Read README.md in the workspace and list the file names you can see, then finish."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "platform_subdir_env_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102646-e38da3\\report.json",
+      "run_dir_relpath": "platform_subdir_env_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102646-e38da3",
+      "run_id": "run_20261005-102646-e38da3",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_462c8263",
+        "final_answer": "Platform regression 02 executed.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102646-e38da3",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102646-8d918b",
+        "tool_steps": 0,
+        "user_request": "Read README.md in the workspace and list the file names you can see, then finish."
+      },
+      "task_state_relpath": "platform_subdir_env_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102646-e38da3\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.16666666666666666,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_02_subdir_env.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 02 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file",
+        "write_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 2,
+      "category": "platform-regression",
+      "expected_artifact": "hello.py exists with the requested content after the DSML tool call is parsed",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Done.",
+      "fixture_copy_relpath": "platform_dsml_tool_call\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_dsml_tool_call",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Create hello.py containing print(\"hello word\") in the workspace, then finish.",
+      "report": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_de81e51b",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Done.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 77,
+            "rendered_chars": 77,
+            "section_chars": 99,
+            "text": "Create hello.py containing print(\"hello word\") in the workspace, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 199,
+            "rendered_chars": 199,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 187,
+          "memory_chars": 178,
+          "prefix_changed": false,
+          "prefix_chars": 5799,
+          "prefix_hash": "80dda8da4f1f1b8773a7a8c3ea90d11dac9ef65e246babad470c4c0be6e255d4",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "80dda8da4f1f1b8773a7a8c3ea90d11dac9ef65e246babad470c4c0be6e255d4",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4448,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 77,
+          "resume_status": "full-valid",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 339,
+              "rendered_chars": 339
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 99,
+              "rendered_chars": 99
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 199,
+              "rendered_chars": 199
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 178,
+              "rendered_chars": 178
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5799,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 2,
+          "tool_signature": "508c52e985a48f5d83114a73073df865a2a4367f0f413b6899dd06f74fd3ebaf",
+          "workspace_changed": false,
+          "workspace_chars": 3702,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "771d5a56ba033c96cde1bbb1bd81931710a6ac3ab7f77c340c125a48beaee932"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102647-ac3895",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102647-ff892c",
+        "task_state": {
+          "attempts": 2,
+          "checkpoint_id": "ckpt_de81e51b",
+          "final_answer": "Done.",
+          "last_tool": "write_file",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102647-ac3895",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102647-ff892c",
+          "tool_steps": 1,
+          "user_request": "Create hello.py containing print(\"hello word\") in the workspace, then finish."
+        },
+        "tool_steps": 1
+      },
+      "report_relpath": "platform_dsml_tool_call\\bench_repo_platform\\.pico\\runs\\run_20261005-102647-ac3895\\report.json",
+      "run_dir_relpath": "platform_dsml_tool_call\\bench_repo_platform\\.pico\\runs\\run_20261005-102647-ac3895",
+      "run_id": "run_20261005-102647-ac3895",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 2,
+        "checkpoint_id": "ckpt_de81e51b",
+        "final_answer": "Done.",
+        "last_tool": "write_file",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102647-ac3895",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102647-ff892c",
+        "tool_steps": 1,
+        "user_request": "Create hello.py containing print(\"hello word\") in the workspace, then finish."
+      },
+      "task_state_relpath": "platform_dsml_tool_call\\bench_repo_platform\\.pico\\runs\\run_20261005-102647-ac3895\\task_state.json",
+      "tool_steps": 1,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 2,
+        "loop_depth_ratio": 0.3333333333333333,
+        "retry_count": 0,
+        "tool_calls": 1,
+        "tool_selection_accuracy": 1.0
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_03_dsml_tool.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 03 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the thinking budget guard regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Platform regression 04 executed.",
+      "fixture_copy_relpath": "platform_thinking_budget_guard\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_thinking_budget_guard",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and report its title, then finish.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_581e31f4",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Platform regression 04 executed.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 66,
+            "rendered_chars": 66,
+            "section_chars": 88,
+            "text": "Read README.md in the workspace and report its title, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 85,
+            "rendered_chars": 85,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 73,
+          "memory_chars": 160,
+          "prefix_changed": true,
+          "prefix_chars": 5736,
+          "prefix_hash": "b1fa7557ffd879cb5ed00c5cd07532bb61615bb8b52fa5fcd8818a3654f0746e",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "b1fa7557ffd879cb5ed00c5cd07532bb61615bb8b52fa5fcd8818a3654f0746e",
+          "prompt_cache_supported": false,
+          "prompt_chars": 3964,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 66,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 88,
+              "rendered_chars": 88
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 85,
+              "rendered_chars": 85
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 160,
+              "rendered_chars": 160
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5736,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3716,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "0675ae83c71f86cfd954d5dd672774f47d64b1ed2351049d314353c2213e769e"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102648-6654b5",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102648-de0b36",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_581e31f4",
+          "final_answer": "Platform regression 04 executed.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102648-6654b5",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102648-de0b36",
+          "tool_steps": 0,
+          "user_request": "Read README.md in the workspace and report its title, then finish."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "platform_thinking_budget_guard\\bench_repo_platform\\.pico\\runs\\run_20261005-102648-6654b5\\report.json",
+      "run_dir_relpath": "platform_thinking_budget_guard\\bench_repo_platform\\.pico\\runs\\run_20261005-102648-6654b5",
+      "run_id": "run_20261005-102648-6654b5",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_581e31f4",
+        "final_answer": "Platform regression 04 executed.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102648-6654b5",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102648-de0b36",
+        "tool_steps": 0,
+        "user_request": "Read README.md in the workspace and report its title, then finish."
+      },
+      "task_state_relpath": "platform_thinking_budget_guard\\bench_repo_platform\\.pico\\runs\\run_20261005-102648-6654b5\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.16666666666666666,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_04_thinking_budget.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 04 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the atomic write retry regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Platform regression 05 executed.",
+      "fixture_copy_relpath": "platform_atomic_write_retry\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_atomic_write_retry",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and report how many lines it has, then finish.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_5a35a34f",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Platform regression 05 executed.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 78,
+            "rendered_chars": 78,
+            "section_chars": 100,
+            "text": "Read README.md in the workspace and report how many lines it has, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 97,
+            "rendered_chars": 97,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 85,
+          "memory_chars": 172,
+          "prefix_changed": true,
+          "prefix_chars": 5730,
+          "prefix_hash": "11ac6ef045cd475fb4c81bb566ac49dca633c5f3b26b4e1016ed9607832c3e66",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "11ac6ef045cd475fb4c81bb566ac49dca633c5f3b26b4e1016ed9607832c3e66",
+          "prompt_cache_supported": false,
+          "prompt_chars": 4000,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 78,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 100,
+              "rendered_chars": 100
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 97,
+              "rendered_chars": 97
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 172,
+              "rendered_chars": 172
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5730,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3710,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "001590b955c414c803c284632a1acb1bdc1c8ad5f3caf323990777529ca2f0b3"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102648-201d77",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102648-f565c2",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_5a35a34f",
+          "final_answer": "Platform regression 05 executed.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102648-201d77",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102648-f565c2",
+          "tool_steps": 0,
+          "user_request": "Read README.md in the workspace and report how many lines it has, then finish."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "platform_atomic_write_retry\\bench_repo_platform\\.pico\\runs\\run_20261005-102648-201d77\\report.json",
+      "run_dir_relpath": "platform_atomic_write_retry\\bench_repo_platform\\.pico\\runs\\run_20261005-102648-201d77",
+      "run_id": "run_20261005-102648-201d77",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_5a35a34f",
+        "final_answer": "Platform regression 05 executed.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102648-201d77",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102648-f565c2",
+        "tool_steps": 0,
+        "user_request": "Read README.md in the workspace and report how many lines it has, then finish."
+      },
+      "task_state_relpath": "platform_atomic_write_retry\\bench_repo_platform\\.pico\\runs\\run_20261005-102648-201d77\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.16666666666666666,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_05_atomic_write.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 05 ok\n",
+      "within_budget": true
+    },
+    {
+      "allowed_tools": [
+        "read_file"
+      ],
+      "artifact_digest": "sha256:00d03688be5a89d8f400c75b649d9053414c3bb3c974142ac60fdd7d984eddf7",
+      "artifact_exists": true,
+      "artifact_path": "README.md",
+      "attempts": 1,
+      "category": "platform-regression",
+      "expected_artifact": "bench_repo_platform README.md stays available while the workspace root anchoring regression runs",
+      "expected_artifact_exists": true,
+      "failure_category": null,
+      "final_answer": "Platform regression 06 executed.",
+      "fixture_copy_relpath": "platform_metrics_repo_root_anchor\\bench_repo_platform",
+      "fixture_repo": "tests/fixtures/bench_repo_platform",
+      "id": "platform_metrics_repo_root_anchor",
+      "initial_episodic_notes_empty": true,
+      "initial_history_empty": true,
+      "initial_memory_empty": true,
+      "initial_task_summary_empty": true,
+      "non_failure_stop_reason": true,
+      "passed": true,
+      "prompt": "Read README.md in the workspace and summarise its notes section, then finish.",
+      "report": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_ba1cb9cb",
+        "durable_promotions": [],
+        "durable_rejections": [],
+        "durable_superseded": [],
+        "final_answer": "Platform regression 06 executed.",
+        "prompt_metadata": {
+          "budget_reductions": [],
+          "current_request": {
+            "raw_chars": 77,
+            "rendered_chars": 77,
+            "section_chars": 99,
+            "text": "Read README.md in the workspace and summarise its notes section, then finish."
+          },
+          "history": {
+            "collapsed_duplicate_reads": 0,
+            "older_entries_count": 0,
+            "raw_chars": 96,
+            "rendered_chars": 96,
+            "reused_file_summary_count": 0,
+            "summarized_tool_count": 0
+          },
+          "history_chars": 84,
+          "memory_chars": 171,
+          "prefix_changed": true,
+          "prefix_chars": 5742,
+          "prefix_hash": "c22fdd0f68bc3807599937276dfc8e3a878d9eafa3580c45b5fcd2234f97a7cc",
+          "prompt_budget_chars": 12000,
+          "prompt_cache_key": "c22fdd0f68bc3807599937276dfc8e3a878d9eafa3580c45b5fcd2234f97a7cc",
+          "prompt_cache_supported": false,
+          "prompt_chars": 3997,
+          "prompt_over_budget": false,
+          "recent_commits": 5,
+          "reduction_order": [
+            "relevant_memory",
+            "history",
+            "memory",
+            "prefix"
+          ],
+          "relevant_memory": {
+            "limit": 3,
+            "raw_chars": 23,
+            "rendered_chars": 23,
+            "rendered_count": 0,
+            "rendered_notes": [],
+            "selected_count": 0,
+            "selected_durable_count": 0,
+            "selected_kinds": [],
+            "selected_notes": [],
+            "selected_sources": []
+          },
+          "request_chars": 77,
+          "resume_status": "no-checkpoint",
+          "runtime_identity_mismatch_fields": [],
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ],
+          "section_budgets": {
+            "checkpoint": 400,
+            "current_request": null,
+            "history": 5200,
+            "memory": 1600,
+            "prefix": 3600,
+            "relevant_memory": 1200
+          },
+          "section_order": [
+            "prefix",
+            "checkpoint",
+            "memory",
+            "relevant_memory",
+            "history",
+            "current_request"
+          ],
+          "sections": {
+            "checkpoint": {
+              "budget_chars": 400,
+              "raw_chars": 0,
+              "rendered_chars": 0
+            },
+            "current_request": {
+              "budget_chars": null,
+              "raw_chars": 99,
+              "rendered_chars": 99
+            },
+            "history": {
+              "budget_chars": 5200,
+              "raw_chars": 96,
+              "rendered_chars": 96
+            },
+            "memory": {
+              "budget_chars": 1600,
+              "raw_chars": 171,
+              "rendered_chars": 171
+            },
+            "prefix": {
+              "budget_chars": 3600,
+              "raw_chars": 5742,
+              "rendered_chars": 3600
+            },
+            "relevant_memory": {
+              "budget_chars": 1200,
+              "raw_chars": 23,
+              "rendered_chars": 23
+            }
+          },
+          "stale_paths": [],
+          "stale_summary_invalidations": 0,
+          "tool_count": 1,
+          "tool_signature": "44a17ea044d760b356aa697e7f7c461c3c4eedea295c0dbd6dada802a7ff1b27",
+          "workspace_changed": true,
+          "workspace_chars": 3722,
+          "workspace_docs": 2,
+          "workspace_fingerprint": "1fb2d552370c631fc2ffceeb4d685ee896a19ddddd1bce6ce35682909bb7d59c"
+        },
+        "redacted_env": {
+          "secret_env_count": 5,
+          "secret_env_names": [
+            "DASHSCOPE_API_KEY",
+            "LANGSMITH_API_KEY",
+            "LLAMA_CLOUD_API_KEY",
+            "PICO_DEEPSEEK_API_KEY",
+            "WEREAD_API_KEY"
+          ]
+        },
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102650-3ce989",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102650-93ab05",
+        "task_state": {
+          "attempts": 1,
+          "checkpoint_id": "ckpt_ba1cb9cb",
+          "final_answer": "Platform regression 06 executed.",
+          "last_tool": "",
+          "resume_status": "no-checkpoint",
+          "run_id": "run_20261005-102650-3ce989",
+          "status": "completed",
+          "stop_reason": "final_answer_returned",
+          "task_id": "task_20261005-102650-93ab05",
+          "tool_steps": 0,
+          "user_request": "Read README.md in the workspace and summarise its notes section, then finish."
+        },
+        "tool_steps": 0
+      },
+      "report_relpath": "platform_metrics_repo_root_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102650-3ce989\\report.json",
+      "run_dir_relpath": "platform_metrics_repo_root_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102650-3ce989",
+      "run_id": "run_20261005-102650-3ce989",
+      "status": "pass",
+      "step_budget": 6,
+      "stop_reason": "final_answer_returned",
+      "task_state": {
+        "attempts": 1,
+        "checkpoint_id": "ckpt_ba1cb9cb",
+        "final_answer": "Platform regression 06 executed.",
+        "last_tool": "",
+        "resume_status": "no-checkpoint",
+        "run_id": "run_20261005-102650-3ce989",
+        "status": "completed",
+        "stop_reason": "final_answer_returned",
+        "task_id": "task_20261005-102650-93ab05",
+        "tool_steps": 0,
+        "user_request": "Read README.md in the workspace and summarise its notes section, then finish."
+      },
+      "task_state_relpath": "platform_metrics_repo_root_anchor\\bench_repo_platform\\.pico\\runs\\run_20261005-102650-3ce989\\task_state.json",
+      "tool_steps": 0,
+      "trajectory": {
+        "invalid_tool_calls": 0,
+        "loop_depth": 1,
+        "loop_depth_ratio": 0.16666666666666666,
+        "retry_count": 0,
+        "tool_calls": 0,
+        "tool_selection_accuracy": null
+      },
+      "verifier": "\"D:\\Dev\\miniconda3\\python.exe\" verify_platform_06_repo_root_anchor.py",
+      "verifier_exit_code": 0,
+      "verifier_passed": true,
+      "verifier_stderr": "",
+      "verifier_stdout": "platform regression 06 ok\n",
+      "within_budget": true
+    }
+  ],
+  "runtime": {
+    "branch": "main",
+    "commit_sha": "95cb3e56e9767854d22fb79af4330d08ae7c675f"
+  },
+  "schema_version": 1,
+  "summary": {
+    "failed": 0,
+    "failure_category_counts": {},
+    "pass_rate": 1.0,
+    "passed": 18,
+    "total_tasks": 18,
+    "trajectory": {
+      "avg_invalid_tool_calls": 0.16666666666666666,
+      "avg_loop_depth": 1.7222222222222223,
+      "avg_loop_depth_ratio": 0.4092592592592592,
+      "avg_retry_count": 0.0,
+      "avg_tool_selection_accuracy": 0.84375,
+      "tool_selection_accuracy_runs": 8,
+      "total_invalid_tool_calls": 3
+    },
+    "verifier_pass_rate": 1.0,
+    "verifier_passes": 18,
+    "within_budget": 18,
+    "within_budget_rate": 1.0
+  }
+}
