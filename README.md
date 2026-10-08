@@ -18,7 +18,7 @@
 - 模块入口是 `python -m tether`
 - 会话保存在 `.tether/sessions/`
 - 每次运行的工件保存在 `.tether/runs/<run_id>/`
-- 可选的外部追踪：设 `TETHER_TRACING=otel` 后按 OpenTelemetry GenAI 语义约定上报 span（详见 `09-可观测性与外部追踪接入.md`），上报比例用 `TETHER_TRACING_SAMPLE_RATE` 控制，默认 1
+- 可选的外部追踪：设 `TETHER_TRACING=otel` 后按 OpenTelemetry GenAI 语义约定上报 span，上报比例用 `TETHER_TRACING_SAMPLE_RATE` 控制，默认 1
 - 支持四类模型后端：
   - Ollama
   - OpenAI 兼容 Responses API
