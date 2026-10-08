@@ -15,7 +15,10 @@ Copy-Item (Join-Path $source "*") -Destination $target -Recurse -Force
 Set-Location $target
 git init -q -b gh-pages 2>&1 | Out-Null
 git add -A 2>&1 | Out-Null
-git commit -q -m "tether demo page" 2>&1 | Out-Null
+# 提交身份跟随主仓库的 git 配置，脚本里不硬编码
+$authorName = (git -C $tether config user.name)
+$authorEmail = (git -C $tether config user.email)
+git -c user.name="$authorName" -c user.email="$authorEmail" commit -q -m "tether demo page" 2>&1 | Out-Null
 if ($LASTEXITCODE -ne 0) { throw "提交失败，退出码 $LASTEXITCODE" }
 
 git remote add origin https://github.com/yu-harness/tether.git 2>&1 | Out-Null
