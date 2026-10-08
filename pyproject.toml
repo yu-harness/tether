@@ -7,7 +7,20 @@ name = "tether"
 version = "0.1.0"
 description = "Small local coding agent for DeepSeek, OpenAI-compatible, Anthropic-compatible, and Ollama models"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+  "requests>=2.31",
+  # Windows 不自带 IANA 时区库，evaluator 里的 ZoneInfo("Asia/Shanghai") 依赖它
+  "tzdata; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+# 可选的外部追踪后端，对应 TETHER_TRACING=otel
+tracing = [
+  "opentelemetry-api>=1.44",
+  "opentelemetry-sdk>=1.44",
+  "opentelemetry-exporter-otlp-proto-http>=1.44",
+  "opentelemetry-semantic-conventions>=0.65b0,<0.66",
+]
 
 [project.scripts]
 tether = "tether.cli:main"
