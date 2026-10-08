@@ -1,5 +1,5 @@
 // 本文件由 trace.jsonl 原样生成，事件内容未做任何手工改动。
-// 来源: benchmarks/results/cost-card-2026-10-05/workspaces/path_escape_recovery/bench_repo_patch/.pico/runs/run_20261005-081410-452a72/trace.jsonl
+// 来源: benchmarks/results/cost-card-2026-10-05/workspaces/path_escape_recovery/bench_repo_patch/.tether/runs/run_20261005-081410-452a72/trace.jsonl
 const TRACE_EVENTS = [
   {
     "created_at": "2026-10-05T00:14:10.789358+00:00",
@@ -65,7 +65,7 @@ const TRACE_EVENTS = [
         "DASHSCOPE_API_KEY",
         "LANGSMITH_API_KEY",
         "LLAMA_CLOUD_API_KEY",
-        "PICO_DEEPSEEK_API_KEY",
+        "TETHER_DEEPSEEK_API_KEY",
         "WEREAD_API_KEY",
         "WORKBUDDY_PAC_RPC_TOKEN"
       ],
@@ -231,7 +231,7 @@ const TRACE_EVENTS = [
         "DASHSCOPE_API_KEY",
         "LANGSMITH_API_KEY",
         "LLAMA_CLOUD_API_KEY",
-        "PICO_DEEPSEEK_API_KEY",
+        "TETHER_DEEPSEEK_API_KEY",
         "WEREAD_API_KEY",
         "WORKBUDDY_PAC_RPC_TOKEN"
       ],
@@ -408,7 +408,7 @@ const TRACE_EVENTS = [
         "DASHSCOPE_API_KEY",
         "LANGSMITH_API_KEY",
         "LLAMA_CLOUD_API_KEY",
-        "PICO_DEEPSEEK_API_KEY",
+        "TETHER_DEEPSEEK_API_KEY",
         "WEREAD_API_KEY",
         "WORKBUDDY_PAC_RPC_TOKEN"
       ],
@@ -589,7 +589,7 @@ const TRACE_EVENTS = [
         "DASHSCOPE_API_KEY",
         "LANGSMITH_API_KEY",
         "LLAMA_CLOUD_API_KEY",
-        "PICO_DEEPSEEK_API_KEY",
+        "TETHER_DEEPSEEK_API_KEY",
         "WEREAD_API_KEY",
         "WORKBUDDY_PAC_RPC_TOKEN"
       ],

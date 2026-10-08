@@ -7,8 +7,8 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from pico import FakeModelClient, Pico, SessionStore, WorkspaceContext  # noqa: E402
-from pico.tracing import tracer_from_env  # noqa: E402
+from tether import FakeModelClient, Tether, SessionStore, WorkspaceContext  # noqa: E402
+from tether.tracing import tracer_from_env  # noqa: E402
 
 # 追踪演示：在同一个 session 里跑多个 run，验证三层结构进追踪后端。
 # - 每个 run 一条 trace（trace id 由 run_id 派生）
@@ -16,18 +16,18 @@ from pico.tracing import tracer_from_env  # noqa: E402
 # - 同一 session 的多个 run 共享 session.id（thread 层）
 #
 # 用法（Jaeger：先启动 infra/jaeger/jaeger.exe）：
-#   set PICO_TRACING=otel
+#   set TETHER_TRACING=otel
 #   D:/Dev/miniconda3/python.exe scripts/demo_tracing.py
-# 然后打开 http://localhost:16686 查 service=pico。
-# 指向 Langfuse 时，追加 PICO_OTEL_ENDPOINT 与 PICO_OTEL_HEADERS，
+# 然后打开 http://localhost:16686 查 service=tether。
+# 指向 Langfuse 时，追加 TETHER_OTEL_ENDPOINT 与 TETHER_OTEL_HEADERS，
 # 取值见 .env.example 方案二，然后打开 http://localhost:3000 看 Tracing。
 
 DEMO_WORKSPACE = ROOT / "tmp" / "tracing-demo-workspace"
 
 
 def build_agent(workspace, outputs):
-    store = SessionStore(workspace.repo_root + "/.pico/sessions")
-    return Pico(
+    store = SessionStore(workspace.repo_root + "/.tether/sessions")
+    return Tether(
         model_client=FakeModelClient(outputs),
         workspace=workspace,
         session_store=store,
@@ -36,8 +36,8 @@ def build_agent(workspace, outputs):
 
 
 def main():
-    if not os.environ.get("PICO_TRACING"):
-        raise RuntimeError("PICO_TRACING 未设置，演示需要在环境变量里打开追踪（otel）")
+    if not os.environ.get("TETHER_TRACING"):
+        raise RuntimeError("TETHER_TRACING 未设置，演示需要在环境变量里打开追踪（otel）")
 
     if DEMO_WORKSPACE.exists():
         shutil.rmtree(DEMO_WORKSPACE)
@@ -64,7 +64,7 @@ def main():
     print("run 2:", agent.ask("README 里写了什么"))
     print("run 3:", agent.ask("还需要再读文件吗"))
     tracer.flush()
-    print("session 内 run 数：3，请到追踪后端（Jaeger 查 service=pico，Langfuse 看 Tracing）核对 trace 数与 span 树。")
+    print("session 内 run 数：3，请到追踪后端（Jaeger 查 service=tether，Langfuse 看 Tracing）核对 trace 数与 span 树。")
     return 0
 
 

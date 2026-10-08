@@ -4,10 +4,10 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, os.environ["PICO_BENCHMARK_REPO_ROOT"])
+sys.path.insert(0, os.environ["TETHER_BENCHMARK_REPO_ROOT"])
 
-from pico.run_store import RunStore
-from pico.task_state import TaskState
+from tether.run_store import RunStore
+from tether.task_state import TaskState
 
 root = Path.cwd()
 store = RunStore(root / "atomic-runs")

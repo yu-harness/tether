@@ -10,8 +10,8 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from pico.evaluation.evaluator import run_harness_regression_v2  # noqa: E402
-from pico.evaluation.metrics import (  # noqa: E402
+from tether.evaluation.evaluator import run_harness_regression_v2  # noqa: E402
+from tether.evaluation.metrics import (  # noqa: E402
     collect_resume_metrics,
     run_context_ablation_v2,
     run_memory_ablation_v2,
@@ -94,7 +94,7 @@ def main(argv=None):
 
     print("core report ...")
     write_benchmark_core_report(
-        report_path=out_dir / "pico-benchmark-core-report.md",
+        report_path=out_dir / "tether-benchmark-core-report.md",
         harness_artifact_path=harness_path,
         context_artifact_path=context_path,
         memory_artifact_path=memory_path,

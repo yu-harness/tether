@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 
 import pytest
 
-from pico.evaluation.cost import (
+from tether.evaluation.cost import (
     DEEPSEEK_FLASH_PRICES,
     compute_run_cost,
     is_peak_time,

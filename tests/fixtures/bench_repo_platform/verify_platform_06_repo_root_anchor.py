@@ -5,11 +5,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-repo_root = Path(os.environ["PICO_BENCHMARK_REPO_ROOT"])
+repo_root = Path(os.environ["TETHER_BENCHMARK_REPO_ROOT"])
 sys.path.insert(0, str(repo_root))
 
-from pico.evaluation import metrics as metrics_module
-from pico.evaluation.metrics import (
+from tether.evaluation import metrics as metrics_module
+from tether.evaluation.metrics import (
     _build_memory_experiment_agent,
     _build_recovery_agent,
     _security_agent,

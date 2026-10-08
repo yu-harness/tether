@@ -11,19 +11,19 @@ from unittest.mock import patch
 
 import pytest
 
-import pico.cli as cli_module
-import pico.evaluation.metrics as metrics_module
-from pico import AnthropicCompatibleModelClient, Pico, WorkspaceContext
-from pico.config import load_project_env
-from pico.evaluation.metrics import (
+import tether.cli as cli_module
+import tether.evaluation.metrics as metrics_module
+from tether import AnthropicCompatibleModelClient, Tether, WorkspaceContext
+from tether.config import load_project_env
+from tether.evaluation.metrics import (
     _build_memory_experiment_agent,
     _build_recovery_agent,
     _security_agent,
 )
-from pico.run_store import RunStore
-from pico.task_state import TaskState
-from pico.tool_context import ToolContext
-from pico.tools import tool_run_shell, tool_search
+from tether.run_store import RunStore
+from tether.task_state import TaskState
+from tether.tool_context import ToolContext
+from tether.tools import tool_run_shell, tool_search
 
 
 def _tool_context(tmp_path):
@@ -97,17 +97,17 @@ def test_load_project_env_anchors_to_workspace_cwd_not_repo_root(tmp_path):
     repo_root = tmp_path / "repo"
     nested = repo_root / "sub" / "proj"
     nested.mkdir(parents=True)
-    (nested / ".env").write_text("PICO_REGRESSION_NESTED_ENV=nested-value\n", encoding="utf-8")
+    (nested / ".env").write_text("TETHER_REGRESSION_NESTED_ENV=nested-value\n", encoding="utf-8")
     workspace = WorkspaceContext.build(nested, repo_root_override=repo_root)
 
     with patch.dict(os.environ, {}, clear=False):
-        os.environ.pop("PICO_REGRESSION_NESTED_ENV", None)
+        os.environ.pop("TETHER_REGRESSION_NESTED_ENV", None)
         loaded = load_project_env(workspace.cwd, override=False)
 
-        assert loaded == {"PICO_REGRESSION_NESTED_ENV": "nested-value"}
-        assert os.environ["PICO_REGRESSION_NESTED_ENV"] == "nested-value"
+        assert loaded == {"TETHER_REGRESSION_NESTED_ENV": "nested-value"}
+        assert os.environ["TETHER_REGRESSION_NESTED_ENV"] == "nested-value"
         # 旧口径从 repo_root 出发只会向上找，永远看不到子目录里的 .env
-        assert "PICO_REGRESSION_NESTED_ENV" not in load_project_env(workspace.repo_root, override=False)
+        assert "TETHER_REGRESSION_NESTED_ENV" not in load_project_env(workspace.repo_root, override=False)
 
     # 把 cli.py 的锚定口径钉死：起点必须是 workspace.cwd 且 override=False，
     # 改回 workspace.repo_root 或漏掉 override 参数都会让这条断言失败。
@@ -117,7 +117,7 @@ def test_load_project_env_anchors_to_workspace_cwd_not_repo_root(tmp_path):
 
 # ---------------------------------------------------------------------------
 # 03 DSML 工具标记解析：parse_dsml_tool / looks_like_malformed_tool 直接用例
-# （Pico.parse 整链路的 malformed 降级已由 test_pico.py 覆盖，这里补直接覆盖面）
+# （Tether.parse 整链路的 malformed 降级已由 test_tether.py 覆盖，这里补直接覆盖面）
 # ---------------------------------------------------------------------------
 
 
@@ -127,7 +127,7 @@ def test_parse_dsml_tool_write_file_with_content_tag():
         '<|DSML| invoke name="write_file" path="hello.py"><content>print("hello word")\n</content></tool>'
     )
 
-    payload = Pico.parse_dsml_tool(raw)
+    payload = Tether.parse_dsml_tool(raw)
 
     assert payload == {
         "name": "write_file",
@@ -138,7 +138,7 @@ def test_parse_dsml_tool_write_file_with_content_tag():
 def test_parse_dsml_tool_read_file_uses_attributes_as_args():
     raw = '<|DSML| invoke name="read_file" path="README.md">'
 
-    payload = Pico.parse_dsml_tool(raw)
+    payload = Tether.parse_dsml_tool(raw)
 
     assert payload == {"name": "read_file", "args": {"path": "README.md"}}
 
@@ -147,32 +147,32 @@ def test_parse_dsml_tool_strips_copied_tool_close_tag_from_body():
     # 模型抄示例抄来的 </tool> 结尾必须剥掉，正文整体当 content
     raw = '<|DSML| invoke name="write_file" path="a.py">print("hi")\n</tool>'
 
-    payload = Pico.parse_dsml_tool(raw)
+    payload = Tether.parse_dsml_tool(raw)
 
     assert payload == {"name": "write_file", "args": {"path": "a.py", "content": 'print("hi")'}}
 
 
 def test_parse_dsml_tool_returns_none_for_unrecognized_shape():
-    assert Pico.parse_dsml_tool("<|DSML| calls>") is None
+    assert Tether.parse_dsml_tool("<|DSML| calls>") is None
     # 有 invoke 但缺 name，认不出来
-    assert Pico.parse_dsml_tool('<|DSML| invoke path="a.py">') is None
-    assert Pico.parse_dsml_tool("just a plain answer") is None
+    assert Tether.parse_dsml_tool('<|DSML| invoke path="a.py">') is None
+    assert Tether.parse_dsml_tool("just a plain answer") is None
 
 
 def test_parse_translates_dsml_output_into_tool_action():
     raw = '<|DSML| calls>\n<|DSML| invoke name="read_file" path="README.md">'
 
-    kind, payload = Pico.parse(raw)
+    kind, payload = Tether.parse(raw)
 
     assert kind == "tool"
     assert payload == {"name": "read_file", "args": {"path": "README.md"}}
 
 
 def test_looks_like_malformed_tool_flags_known_tool_names_only():
-    assert Pico.looks_like_malformed_tool('<invoke name="read_file" path="x">') is True
-    assert Pico.looks_like_malformed_tool("plain final answer") is False
+    assert Tether.looks_like_malformed_tool('<invoke name="read_file" path="x">') is True
+    assert Tether.looks_like_malformed_tool("plain final answer") is False
     # 没有尖括号、只出现工具名，不算疑似工具调用（保守识别）
-    assert Pico.looks_like_malformed_tool('name="read_file" without brackets') is False
+    assert Tether.looks_like_malformed_tool('name="read_file" without brackets') is False
 
 
 # ---------------------------------------------------------------------------

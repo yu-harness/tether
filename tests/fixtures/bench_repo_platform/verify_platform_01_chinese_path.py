@@ -4,11 +4,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-sys.path.insert(0, os.environ["PICO_BENCHMARK_REPO_ROOT"])
+sys.path.insert(0, os.environ["TETHER_BENCHMARK_REPO_ROOT"])
 
-from pico.tool_context import ToolContext
-from pico.tools import tool_search
-from pico.workspace import WorkspaceContext
+from tether.tool_context import ToolContext
+from tether.tools import tool_search
+from tether.workspace import WorkspaceContext
 
 root = Path.cwd()
 zh_dir = root / "中文工作区"

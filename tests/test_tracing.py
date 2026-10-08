@@ -3,8 +3,8 @@ from types import SimpleNamespace
 
 import pytest
 
-from pico import FakeModelClient, Pico, SessionStore, WorkspaceContext
-from pico.tracing import (
+from tether import FakeModelClient, Tether, SessionStore, WorkspaceContext
+from tether.tracing import (
     NoopTracer,
     SamplingTracer,
     _make_otlp_exporter,
@@ -34,8 +34,8 @@ def build_workspace(tmp_path):
 
 
 def build_agent(tmp_path, outputs, **kwargs):
-    store = SessionStore(tmp_path / ".pico" / "sessions")
-    return Pico(
+    store = SessionStore(tmp_path / ".tether" / "sessions")
+    return Tether(
         model_client=FakeModelClient(outputs),
         workspace=build_workspace(tmp_path),
         session_store=store,
@@ -45,21 +45,21 @@ def build_agent(tmp_path, outputs, **kwargs):
 
 
 def test_tracer_defaults_to_noop(monkeypatch):
-    monkeypatch.delenv("PICO_TRACING", raising=False)
+    monkeypatch.delenv("TETHER_TRACING", raising=False)
     tracer = tracer_from_env()
     assert isinstance(tracer, NoopTracer)
 
 
 def test_tracer_rejects_unknown_backend(monkeypatch):
-    monkeypatch.setenv("PICO_TRACING", "jaeger")
+    monkeypatch.setenv("TETHER_TRACING", "jaeger")
     with pytest.raises(RuntimeError):
         tracer_from_env()
 
 
 def test_tracer_fails_fast_when_collector_unreachable(monkeypatch):
-    monkeypatch.setenv("PICO_TRACING", "otel")
+    monkeypatch.setenv("TETHER_TRACING", "otel")
     # 19999 端口上没有 collector，必须就地报错，不允许追踪静默丢失。
-    monkeypatch.setenv("PICO_OTEL_ENDPOINT", "http://localhost:19999/v1/traces")
+    monkeypatch.setenv("TETHER_OTEL_ENDPOINT", "http://localhost:19999/v1/traces")
     with pytest.raises(OSError):
         tracer_from_env()
 
@@ -97,7 +97,7 @@ def test_remote_exporter_keeps_default_session(monkeypatch):
 
 
 def test_agent_uses_noop_tracer_when_env_unset(tmp_path, monkeypatch):
-    monkeypatch.delenv("PICO_TRACING", raising=False)
+    monkeypatch.delenv("TETHER_TRACING", raising=False)
     agent = build_agent(tmp_path, ["<final>done</final>"])
     assert isinstance(agent.tracer, NoopTracer)
     agent.ask("hello")
@@ -167,8 +167,8 @@ def test_sampling_tracer_keeps_each_run_atomic():
 
 
 def test_tracer_disabled_when_sample_rate_zero(monkeypatch):
-    monkeypatch.setenv("PICO_TRACING", "otel")
-    monkeypatch.setenv("PICO_TRACING_SAMPLE_RATE", "0")
+    monkeypatch.setenv("TETHER_TRACING", "otel")
+    monkeypatch.setenv("TETHER_TRACING_SAMPLE_RATE", "0")
     # 采样率为 0 时不建连接，端点不可达也不报错。
-    monkeypatch.setenv("PICO_OTEL_ENDPOINT", "http://localhost:19999/v1/traces")
+    monkeypatch.setenv("TETHER_OTEL_ENDPOINT", "http://localhost:19999/v1/traces")
     assert isinstance(tracer_from_env(), NoopTracer)

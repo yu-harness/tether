@@ -5,7 +5,7 @@ from collections import Counter
 
 import pytest
 
-from pico.evaluation.evaluator import (
+from tether.evaluation.evaluator import (
     BenchmarkEvaluator,
     _current_locale,
     compute_run_trajectory_metrics,

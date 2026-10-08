@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from pico.evaluation.cost import DEEPSEEK_FLASH_PRICES, compute_run_cost, summarize_run_costs  # noqa: E402
+from tether.evaluation.cost import DEEPSEEK_FLASH_PRICES, compute_run_cost, summarize_run_costs  # noqa: E402
 
 # 成本卡片生成入口：读取一个 runs 根目录（下面是 run_*/trace.jsonl），
 # 算出每任务的 token、费用与 prefix 缓存命中带来的节省，输出 Markdown 卡片。
@@ -68,7 +68,7 @@ def main(argv=None):
 
     runs_root = Path(args.runs_root)
     # 兼容两种形态：直接的 runs 根（run_*/trace.jsonl）与
-    # benchmark workspace 根（<任务目录>/.pico/runs/run_*/trace.jsonl）。
+    # benchmark workspace 根（<任务目录>/.tether/runs/run_*/trace.jsonl）。
     trace_paths = sorted(runs_root.glob("**/run_*/trace.jsonl"))
     if not trace_paths:
         raise RuntimeError(f"{runs_root} 下没有找到 run_*/trace.jsonl")

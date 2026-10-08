@@ -6,9 +6,9 @@ import urllib.request
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 
-sys.path.insert(0, os.environ["PICO_BENCHMARK_REPO_ROOT"])
+sys.path.insert(0, os.environ["TETHER_BENCHMARK_REPO_ROOT"])
 
-from pico.providers.clients import AnthropicCompatibleModelClient
+from tether.providers.clients import AnthropicCompatibleModelClient
 
 received = []
 state = {"first": True}

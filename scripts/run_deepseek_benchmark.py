@@ -23,9 +23,9 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from pico.config import load_project_env, provider_env  # noqa: E402
-from pico.evaluation.evaluator import run_fixed_benchmark  # noqa: E402
-from pico.providers.clients import AnthropicCompatibleModelClient  # noqa: E402
+from tether.config import load_project_env, provider_env  # noqa: E402
+from tether.evaluation.evaluator import run_fixed_benchmark  # noqa: E402
+from tether.providers.clients import AnthropicCompatibleModelClient  # noqa: E402
 
 DEFAULT_BASE_URL = "https://api.deepseek.com/anthropic"
 DEFAULT_MODEL = "deepseek-flash"
@@ -38,7 +38,7 @@ def build_client_factory(model, base_url, temperature, timeout):
         return AnthropicCompatibleModelClient(
             model=model,
             base_url=base_url,
-            api_key=provider_env("PICO_DEEPSEEK_API_KEY", ("DEEPSEEK_API_KEY",)),
+            api_key=provider_env("TETHER_DEEPSEEK_API_KEY", ("DEEPSEEK_API_KEY",)),
             temperature=temperature,
             timeout=timeout,
             # 与 CLI 保持一致：V4.1 默认思考模式会吃掉输出预算，这里关掉
@@ -73,13 +73,13 @@ def materialize_benchmark(source_path, target_path):
 
 def build_arg_parser():
     parser = argparse.ArgumentParser(
-        description="用 DeepSeek 跑 pico 的固定 benchmark，并把结果写成工件。"
+        description="用 DeepSeek 跑 tether 的固定 benchmark，并把结果写成工件。"
     )
     parser.add_argument("--benchmark-path", default="benchmarks/coding_tasks.json")
     parser.add_argument("--output-json", required=True, help="benchmark 工件输出路径")
     parser.add_argument("--workspace-root", default="artifacts/deepseek-benchmark-workspaces")
-    parser.add_argument("--model", default=None, help="默认取 PICO_DEEPSEEK_MODEL 或 deepseek-flash")
-    parser.add_argument("--base-url", default=None, help="默认取 PICO_DEEPSEEK_API_BASE")
+    parser.add_argument("--model", default=None, help="默认取 TETHER_DEEPSEEK_MODEL 或 deepseek-flash")
+    parser.add_argument("--base-url", default=None, help="默认取 TETHER_DEEPSEEK_API_BASE")
     parser.add_argument("--temperature", type=float, default=0.2)
     parser.add_argument("--timeout", type=int, default=300)
     parser.add_argument("--max-new-tokens", type=int, default=2048)
@@ -113,9 +113,9 @@ def main(argv=None):
     args = build_arg_parser().parse_args(argv)
     # .env 的查找口径和 CLI 保持一致：从当前工作目录往上找
     load_project_env(Path.cwd())
-    if not provider_env("PICO_DEEPSEEK_API_KEY", ("DEEPSEEK_API_KEY",)):
+    if not provider_env("TETHER_DEEPSEEK_API_KEY", ("DEEPSEEK_API_KEY",)):
         print(
-            "没读到 DeepSeek key：请在项目 .env 或环境变量里设置 PICO_DEEPSEEK_API_KEY",
+            "没读到 DeepSeek key：请在项目 .env 或环境变量里设置 TETHER_DEEPSEEK_API_KEY",
             file=sys.stderr,
         )
         return 1
@@ -131,9 +131,9 @@ def main(argv=None):
         print(f"verifier 里的 python3 已换成本次解释器：{replaced} 个任务")
         print(f"本地 benchmark 副本：{benchmark_path}")
 
-    model = args.model or provider_env("PICO_DEEPSEEK_MODEL", ("DEEPSEEK_MODEL",), DEFAULT_MODEL)
+    model = args.model or provider_env("TETHER_DEEPSEEK_MODEL", ("DEEPSEEK_MODEL",), DEFAULT_MODEL)
     base_url = args.base_url or provider_env(
-        "PICO_DEEPSEEK_API_BASE", ("DEEPSEEK_API_BASE",), DEFAULT_BASE_URL
+        "TETHER_DEEPSEEK_API_BASE", ("DEEPSEEK_API_BASE",), DEFAULT_BASE_URL
     )
     print(f"model={model}")
     print(f"base_url={base_url}")

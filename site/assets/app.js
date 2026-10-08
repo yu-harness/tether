@@ -1,4 +1,4 @@
-/* pico 演示站 · run 回放逻辑
+/* tether 演示站 · run 回放逻辑
  * 数据来自 assets/events.js（由真实 trace.jsonl 原样生成）。
  * 不做静默容错：数据缺失或格式异常直接报错。
  */
@@ -317,4 +317,4 @@ trackEl.addEventListener("click", function (e) {
 timeTotalEl.textContent = fmtOffset(TOTAL_MS);
 renderSummary();
 setPlayhead(0, true);
-console.log("pico replay: 已加载 " + events.length + " 条事件，run 时长 " + TOTAL_MS + " ms。");
+console.log("tether replay: 已加载 " + events.length + " 条事件，run 时长 " + TOTAL_MS + " ms。");

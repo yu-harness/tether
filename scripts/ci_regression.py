@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from pico.evaluation.evaluator import run_harness_regression_v2  # noqa: E402
+from tether.evaluation.evaluator import run_harness_regression_v2  # noqa: E402
 
 
 def materialize_benchmark(source_path, target_path):

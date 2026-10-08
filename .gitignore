@@ -30,8 +30,8 @@ htmlcov/
 # Local scratch space
 tmp/
 .worktrees/
-.pico/
-.mini-pico/
+.tether/
+.mini-tether/
 artifacts/
 release/
 readme_intro_locked/
@@ -47,8 +47,8 @@ infra/
 # Local docs not intended for publication
 docs/*
 !docs/agent-harness-v1-overview.md
-!docs/pico-review-pack.md
-!docs/pico-bugfix-log.md
+!docs/tether-review-pack.md
+!docs/tether-bugfix-log.md
 !docs/tracing/
 !docs/tracing/*
 
@@ -56,7 +56,7 @@ docs/*
 .DS_Store
 
 # Packaging metadata
-pico.egg-info/
+tether.egg-info/
 tether.egg-info/
 
 # Benchmark run artifacts: generated workspaces carry their own nested git repos

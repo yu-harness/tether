@@ -1,6 +1,6 @@
-# pico 工作约定
+# tether 工作约定
 
-这个目录是 pico 本体。解释器用 `D:/Dev/miniconda3/python.exe`，本机只有它装齐了依赖。
+这个目录是 tether 本体。解释器用 `D:/Dev/miniconda3/python.exe`，本机只有它装齐了依赖。
 
 ## 提交前跑这三条
 
@@ -26,4 +26,4 @@
 
 - 每个平台级缺陷先写一个 pytest 用例，`tests/test_platform_regressions.py` 是现成的例子
 - 能用脚本化模型在 fixture 工作区里复现的，再补一个 `platform-regression` 类别的固定任务进 `benchmarks/coding_tasks.json`
-- 新任务的 verifier 写进 `tests/fixtures/bench_repo_platform/`，需要调用 pico 代码时读 `PICO_BENCHMARK_REPO_ROOT`
+- 新任务的 verifier 写进 `tests/fixtures/bench_repo_platform/`，需要调用 tether 代码时读 `TETHER_BENCHMARK_REPO_ROOT`

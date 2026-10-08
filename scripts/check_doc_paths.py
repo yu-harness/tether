@@ -2,7 +2,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PKG = ROOT / "pico"
+PKG = ROOT / "tether"
 SUBPACKAGES = ("providers", "features", "evaluation")
 
 PATH_PATTERN = re.compile(r"`([A-Za-z0-9_][A-Za-z0-9_./\\-]*\.py)`")
@@ -17,7 +17,7 @@ for md in SOURCES:
         for match in PATH_PATTERN.finditer(line):
             raw = match.group(1).replace("\\", "/")
             where = f"{md.relative_to(ROOT)}:{lineno}"
-            if raw.startswith("pico/") or raw.startswith("tests/"):
+            if raw.startswith("tether/") or raw.startswith("tests/"):
                 if not (ROOT / raw).exists():
                     missing_prefixed.append((where, raw))
                 continue
@@ -27,11 +27,11 @@ for md in SOURCES:
                 continue
             subpackages = [name for name in SUBPACKAGES if (PKG / name / raw).exists()]
             if subpackages:
-                needs_prefix.append((where, raw, [f"pico/{name}/{raw}" for name in subpackages]))
+                needs_prefix.append((where, raw, [f"tether/{name}/{raw}" for name in subpackages]))
             elif not (ROOT / "scripts" / raw).exists() and not (ROOT / "tests" / raw).exists():
                 unknown.append((where, raw))
 
-print("### 带 pico/ 或 tests/ 前缀，但文件不存在")
+print("### 带 tether/ 或 tests/ 前缀，但文件不存在")
 for where, raw in missing_prefixed:
     print(f"{where}  {raw}")
 if not missing_prefixed:

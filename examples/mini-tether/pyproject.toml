@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-tether"
+version = "0.1.0"
+description = "Teaching-sized Tether agent harness"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+mini-tether = "mini_tether.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3.5",
+  "ruff>=0.4.4",
+]
+
+[tool.setuptools.packages.find]
+include = ["mini_tether*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""跑 pico 的消融实验（synthetic 模式，脚本化模型，不调用真实 API）。
+"""跑 tether 的消融实验（synthetic 模式，脚本化模型，不调用真实 API）。
 
 为什么存在：
-1. `scripts/run_large_scale_experiments.py` 写的是 `from pico.metrics import ...`，
-   重构到 `pico/evaluation/` 之后没有同步，已经 ImportError；
+1. `scripts/run_large_scale_experiments.py` 写的是 `from tether.metrics import ...`，
+   重构到 `tether/evaluation/` 之后没有同步，已经 ImportError；
 2. benchmark 的 verifier 写的是 `python3 -c ...`，Windows 上没有 `python3`，
    不处理的话 harness regression 会整批停在 verifier_failed。
 
@@ -14,7 +14,7 @@
 - security：工具边界的拦截场景
 
 用法：
-    python scripts/run_ablation_experiments.py --runs-root 'D:\\tmp\\pico-playground\\.pico\\runs'
+    python scripts/run_ablation_experiments.py --runs-root 'D:\\tmp\\tether-playground\\.tether\\runs'
 """
 
 import argparse
@@ -26,8 +26,8 @@ ROOT = Path(__file__).resolve().parent.parent
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from pico.evaluation.evaluator import run_harness_regression_v2  # noqa: E402
-from pico.evaluation.metrics import (  # noqa: E402
+from tether.evaluation.evaluator import run_harness_regression_v2  # noqa: E402
+from tether.evaluation.metrics import (  # noqa: E402
     collect_resume_metrics,
     render_large_scale_experiment_report,
     render_resume_metrics_markdown,
@@ -58,13 +58,13 @@ def materialize_benchmark(source_path, target_path):
 
 def build_arg_parser():
     parser = argparse.ArgumentParser(
-        description="跑 pico 的 synthetic 消融实验并输出 Markdown 报告（不需要 API key）。"
+        description="跑 tether 的 synthetic 消融实验并输出 Markdown 报告（不需要 API key）。"
     )
     parser.add_argument("--out-dir", default="artifacts/ablation", help="实验工件输出目录")
     parser.add_argument(
         "--runs-root",
         required=True,
-        help="用来聚合运行工件的 .pico/runs 根目录，例如 'D:\\tmp\\pico-playground\\.pico\\runs'",
+        help="用来聚合运行工件的 .tether/runs 根目录，例如 'D:\\tmp\\tether-playground\\.tether\\runs'",
     )
     parser.add_argument("--benchmark-path", default="benchmarks/coding_tasks.json")
     parser.add_argument("--benchmark-artifact", default=None, help="已有的 harness regression 工件；不给就先跑一次")

@@ -3,9 +3,9 @@ import os
 import sys
 from pathlib import Path
 
-sys.path.insert(0, os.environ["PICO_BENCHMARK_REPO_ROOT"])
+sys.path.insert(0, os.environ["TETHER_BENCHMARK_REPO_ROOT"])
 
-from pico.runtime import Pico
+from tether.runtime import Tether
 
 root = Path.cwd()
 hello = root / "hello.py"
@@ -16,13 +16,13 @@ dsml = (
     '<|DSML| calls>\n'
     '<|DSML| invoke name="write_file" path="hello.py"><content>print("hello word")\n</content></tool>'
 )
-payload = Pico.parse_dsml_tool(dsml)
+payload = Tether.parse_dsml_tool(dsml)
 assert payload == {
     "name": "write_file",
     "args": {"path": "hello.py", "content": 'print("hello word")\n'},
 }, payload
 
-run_dir = next((root / ".pico" / "runs").glob("*"))
+run_dir = next((root / ".tether" / "runs").glob("*"))
 events = [
     json.loads(line)
     for line in (run_dir / "trace.jsonl").read_text(encoding="utf-8").splitlines()
