@@ -1448,7 +1448,11 @@ def test_resume_records_runtime_identity_mismatch_fields_in_metadata_and_trace(t
                 "freshness": {},
                 "summary": "identity changed",
                 "runtime_identity": {
-                    "workspace_fingerprint": agent.workspace.fingerprint(),
+                    # 存一个明确过期的指纹。真实指纹由 cwd / repo_root / branch /
+                    # status / recent_commits 等算出，会受工作区外层是否套着别的
+                    # git 仓库影响（CI 的临时目录不在任何仓库内，两个指纹会相等），
+                    # 用它做断言会随环境漂移。
+                    "workspace_fingerprint": "outdated-workspace-fingerprint",
                     "approval_policy": "auto",
                     "read_only": False,
                     "max_steps": 6,
